@@ -209,6 +209,5 @@ function abre_caja_cambia_port(){
     $("#caja_cambiar_port").css("display","block");
 }
 </script>
-<!-- echo "ESTO ES UNA LINEA AÑADIDA....BORRARLA"
- --></body>
+</body>
 </html>
