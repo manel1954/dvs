@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+	z-index:0;
+}
+.parallax-window1 {
+    min-height: 400px;
+    background: transparent;
+}
+.parallax-window h4{
+   color:#FFF;
+   padding:100px;
+}
