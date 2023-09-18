@@ -195,7 +195,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 </div> 
 
 <div>
-<button class="button link_naranja" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">UPDATE</a</buttton>
+<button class="button link_naranja" ><a href="/dvs/config/update.php" class="btn btn-danger" style="color:#fff;">UPDATE</a</buttton>
 </div>
 
 <?php
