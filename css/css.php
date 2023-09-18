@@ -277,7 +277,7 @@ ul li a span {
 }
 
 ul.mmenu li a.current, ul.mmenu li a:hover {
-    background: url(/images/buttonbg.pn) no-repeat top right;
+    background: url(/images/buttonbg.png) no-repeat top right;
     color: #0d5f83;
 }
 
