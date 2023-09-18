@@ -188,9 +188,9 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 </div>
 
 <div>
-<button class="button link_rojo"><a href="/dvs/config/editor_general.php" class="btn btn-success" style="color:#fff;">EDITOR GENERAL</a</buttton>
-<button class="button link_verde_claro" ><a href="/dvs/config/activar_dvswitch.php" class="btn btn-danger" style="color:#000;">ACTIVAR DVSWITCH</a</buttton>
-<button class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
+<button2 class="button link_rojo"><a href="/dvs/config/editor_general.php" class="btn btn-success" style="color:#fff;">EDITOR GENERAL</a</buttton>
+<button2 class="button link_verde_claro" ><a href="/dvs/config/activar_dvswitch.php" class="btn btn-danger" style="color:#000;">ACTIVAR DVSWITCH</a</buttton>
+<button2 class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
 </div> 
 
 <div>
