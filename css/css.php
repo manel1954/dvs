@@ -363,6 +363,21 @@ input.toggle-round-flat:checked + label:after {
   box-shadow: 0px 8px 10px rgba(0,0,0,0.1);
 }
 
+.button2 {
+  background-color: #356244;
+  border: none;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 4px 2px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 10px rgba(0,0,0,0.1);
+}
+
 .link {background-color: #2A6594; outline:none;}
 .link_rojo {background-color: #f00000; outline:none;}
 .link_negro {background-color: #000000; outline:none;}
