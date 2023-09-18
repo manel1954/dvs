@@ -2,9 +2,9 @@
 session_start();
 
 
-exec("sudo systemctl stop hblink.service");
-exec("sudo systemctl stop hbmon.service");
-exec("sudo systemctl stop parrotservice");
+exec("sudo systemctl restart hblink.service");
+exec("sudo systemctl restart hbmon.service");
+exec("sudo systemctl restart parrotservice");
 ?>
 <!DOCTYPE html>
 <html>
