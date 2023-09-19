@@ -3,9 +3,7 @@ include_once 'include/config.php';
 include_once 'include/tools.php';
 $callsign = exec("sudo sed -n '2p' /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
 $callsign = substr("$callsign", 9, 11); 	
-session_start();
-if($_SESSION['permisos'] == 1)
-{
+
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -222,6 +220,12 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 </div>
 <button class="bt btn-link btn-sm" name="cerrar_BM" onclick="conectar_bm()"><img src="imagenes/OFF.png" width="90" alt=""/><a href="panel_control.php" ></a></button>
 </head>
+
+<?php
+        }
+        
+        ?>
+
 
 <script>
 function abre_caja_cambia_port(){
