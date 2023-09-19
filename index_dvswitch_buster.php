@@ -166,7 +166,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_dmr"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
 <button class="button link_dmr"><a href="/dvs/tgif.php" class="btn btn-danger" style="color:#fff;">MODE TGIF</a</buttton>
 
-<button class="button link_naranja"><a href="/dvs/freedmr.php" class="btn btn-danger" style="color:#fff;">MODE FREEDMR</a</buttton>
+<button class="button link_naranja"><a href="/dvs/freedmr.php" class="btn btn-danger" style="color:#fff;">MODE FREEDMRXXXXXXXXXXXX</a</buttton>
 
 </div>
 
