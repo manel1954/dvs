@@ -6,7 +6,7 @@ exec("sudo systemctl restart hblink.service");
 exec("sudo systemctl restart hbmon.service");
 exec("sudo systemctl restart parrotservice");
 
-exec("sed -i '1c DVSWITCH-HBLINK=ON' /var/www/html/dvs/estado-dvswitch-hblink.txt");
+exec("sed -i '1c ON' /var/www/html/dvs/estado.txt");
 ?>
 <!DOCTYPE html>
 <html>

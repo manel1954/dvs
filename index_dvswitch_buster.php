@@ -198,8 +198,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
 
 <?php
-        $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');
-        if ($aa=="DVSWITCH-HBLINK=ON"){ 
+        $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado.txt');
+        if ($aa=="ON"){ 
 ?>
 <head> 
 <div>
