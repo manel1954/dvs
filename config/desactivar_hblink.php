@@ -1,7 +1,17 @@
 <?php 
 session_start();
 
+// Desactivando DVSWITCH
+exec("sudo systemctl stop analog_bridge.service");
+exec("sudo systemctl stop ircddbgatewayd.service");
+exec("sudo systemctl stop md380-emu.service");
+exec("sudo systemctl stop mmdvm_bridge.service");
+exec("sudo systemctl stop nxdngateway.service");
+exec("sudo systemctl stop ysfgateway.service");
+exec("sudo systemctl stop dmr2ysf.service");
+exec("sudo systemctl stop p25gateway.service");
 
+// Desactivando HBLINK
 exec("sudo systemctl stop hblink.service");
 exec("sudo systemctl stop hbmon.service");
 exec("sudo systemctl stop parrotservice");
