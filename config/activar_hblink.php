@@ -12,8 +12,9 @@ exec("sudo systemctl restart dmr2ysf.service");
 exec("sudo systemctl restart p25gateway.service");
 
 // Activando HBLINK
-exec("systemctl restart hblink & systemctl restart hbmon & systemctl restart parrot &");
-
+exec("sudo systemctl restart hblink.service");
+exec("sudo systemctl restart hbmon.service");
+exec("sudo systemctl restart parrot.service");
 
 exec("sed -i '1c ON' /var/www/html/dvs/config/estado-dvswitch-hblink.txt");
 ?>
