@@ -204,8 +204,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <head> 
 <div>
 <button2 class="button2 link_verde_claro" ><a href="/dvs/config/activar_hblink.php" class="btn btn-danger" style="color:#9af240;">ACTIVAR HBLINK</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>
- --></div> 
+</div> 
 <button class="bt btn-link btn-sm" name="cerrar_BM" onclick="desconectar_bm()"><img src="imagenes/ON.png" width="90" alt=""/><a href="panel_control.php" ></a></button> 
 </head>
         
@@ -215,8 +214,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
         ?>
 <head> 
 <div>
-<!-- <button2 class="button2 link_verde_claro" ><a href="/dvs/config/activar_hblink.php" class="btn btn-danger" style="color:#9af240;">ACTIVAR HBLINK</a</buttton>
- --><button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>
+<button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>
 </div>
 <button class="bt btn-link btn-sm" name="cerrar_BM" onclick="conectar_bm()"><img src="imagenes/OFF.png" width="90" alt=""/><a href="panel_control.php" ></a></button>
 </head>
