@@ -152,7 +152,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo "Port TXPort: &nbsp;&nbsp;&nbsp;** ".$abinfo['usrp']['tx_port']." **";
     ?>
 
-<button class="button link_dmr" ><a href="/dvs/brandmeister.php" class="btn btn-danger" style="color:#fff;">MODE BM</a</buttton>
+<button class="button link_dmr" ><a href="/dvs/config/git_pull.php" class="btn btn-danger" style="color:#fff;">UPDATE</a</buttton>
 
 </fieldset>
 
