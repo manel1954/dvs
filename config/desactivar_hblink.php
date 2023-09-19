@@ -47,7 +47,7 @@ exec("sed -i '1c OFF' /var/www/html/dvs/config/estado-dvswitch-hblink.txt");
  	<br><br>
         <div class="row">
                <div class="col-md-6 col-md-offset-2 config_especial">    
-               <h1 class="texto_centrado_blanco">DESACTIVANDO HBLINK</h1>
+               <h1 class="texto_centrado_blanco">DESACTIVANDO DVSWITCH & HBLINK</h1>
                </div> 	                       
         </div><!--  row -->
 </div><!--container-->
