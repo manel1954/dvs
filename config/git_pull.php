@@ -1,6 +1,6 @@
 <?php 
 session_start();
-exec("/var/www/html/dvs/git pull");
+exec("cd /var/www/html/dvs/config/; git pull");
 ?>
 <!DOCTYPE html>
 <html>
