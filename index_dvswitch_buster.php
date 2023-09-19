@@ -227,15 +227,15 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
 
               </head>
-        <?php
+              <?php
+        }
+ 
+        ?>  
 
 
 
-<?php
-}else {
-header('Location:index.php');    
-}
-?>
+
+
 
 
 
