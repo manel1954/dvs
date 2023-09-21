@@ -22,6 +22,11 @@ $callsign = substr("$callsign", 9, 11);
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
+
+<!-- refresca la página cada 60 segundo (implantado por mi) -->
+<!-- ====================================================== -->
+<meta http-equiv="refresh" content="60" />
+
 <link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">
     <title>DVSwitch Dashboard</title>
 <?php include_once "include/browserdetect.php"; ?>
