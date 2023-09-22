@@ -14,7 +14,7 @@ exec("sudo systemctl stop p25gateway.service");
 // Desactivando HBLINK
 exec("sudo systemctl stop hblink.service");
 exec("sudo systemctl stop hbmon.service");
-exec("sudo systemctl stop parrotservice");
+exec("sudo systemctl stop parrot.service");
 
 exec("sed -i '1c DVSWITCH-HBLINK_ACTIVADO=NO' /var/www/html/dvs/config/estado-dvswitch-hblink.txt");
 ?>
