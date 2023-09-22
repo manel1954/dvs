@@ -16,7 +16,7 @@ exec("sudo systemctl stop hblink.service");
 exec("sudo systemctl stop hbmon.service");
 exec("sudo systemctl stop parrotservice");
 
-exec("sed -i '1c OFF' /var/www/html/dvs/config/estado-dvswitch-hblink.txt");
+exec("sed -i '1c DVSWITCH-HBLINK_ACTIVADO=NO' /var/www/html/dvs/config/estado-dvswitch-hblink.txt");
 ?>
 <!DOCTYPE html>
 <html>
