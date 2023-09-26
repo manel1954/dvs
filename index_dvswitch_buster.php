@@ -25,7 +25,7 @@ $callsign = substr("$callsign", 9, 11);
 
 <!-- refresca la página cada 60 segundo (implantado por mi) -->
 <!-- ====================================================== -->
-<meta http-equiv="refresh" content="60" />
+<meta http-equiv="refresh" content="600" />
 
 <link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">
     <title>DVSwitch Dashboard</title>
