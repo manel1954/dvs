@@ -1,251 +1,123 @@
 <?php
-include_once 'include/config.php';
-include_once 'include/tools.php';
-$callsign = exec("sudo sed -n '2p' /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
-$callsign = substr("$callsign", 9, 11); 	
-
-
+include_once dirname(dirname(__FILE__)).'/include/config.php';         
+include_once dirname(dirname(__FILE__)).'/include/tools.php';        
+include_once dirname(dirname(__FILE__)).'/include/functions.php';    
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" lang="en">
-<head>
-    <meta name="robots" content="index" />
-    <meta name="robots" content="follow" />
-    <meta name="language" content="English" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="generator" content="DVSwitch" />
-    <meta name="Author" content="Andrew Taylor (MW0MWZ), Waldek (SP2ONG)" />
-    <meta name="Description" content="Dashboard based on Pi-Star Dashboard, © Andy Taylor (MW0MWZ) and adapted to DVSwitch by SP2ONG" />
-    <meta name="KeyWords" content="MMDVM_Bridge,Analog_Bridge,ircDDBGateway,D-Star,ircDDB,DMRGateway,DMR,YSFGateway,YSF,C4FM,NXDNGateway,NXDN,P25Gateway,P25,DVSwitch,DL5DI,DG9VH,MW0MWZ,SP2ONG" />
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="pragma" content="no-cache" />
-
-<!-- refresca la página cada 60 segundo (implantado por mi) -->
-<!-- ====================================================== -->
-<meta http-equiv="refresh" content="600" />
-
-<link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">
-    <title>DVSwitch Dashboard</title>
-<?php include_once "include/browserdetect.php"; ?>
-    <script type="text/javascript" src="scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/functions.js"></script>
-    <script type="text/javascript" src="scripts/pcm-player.min.js"></script>
-    <script type="text/javascript">
-      $.ajaxSetup({ cache: false });
-    </script>
-    <link href="css/featherlight.css" type="text/css" rel="stylesheet" />
-    <script src="scripts/featherlight.js" type="text/javascript" charset="utf-8"></script>
-    <style type="text/css">
-#caja_cambiar_port{     
-display: none;   
-}
-    </style>
-</head>
-<body style="background-image: url(http://www.associacioader.com/img/fondo_02.png);font: 11pt arial, sans-serif;">
-<center>
-<fieldset style="box-shadow:0 0 10px #999; background-color:#fafafa; width:0px;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-<div class="container"> 
-<div class="header">
-<center>
-<h2>DVSwitch Dashboard&nbsp;&nbsp;<?php echo $callsign;?></h2>
-<img src="Logo_Ader.png" width="120" alt=""/></img>
-</center>
-</div>
-<div class="content"><center>
-<div style="margin-top:8px;">
-
+<span style="font-weight: bold;font-size:14px;">Gateway Activity</span>
+<fieldset style="box-shadow:0 0 10px #999;background-color:#e8e8e8e8; width:640px;margin-top:10px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+  <table style="margin-top:3px;">
+    <tr>
+      <th>Time (<?php echo date('T')?>)</th>
+      <th>Mode</th>
+      <th>Callsign</th>
 <?php
-if ( RXMONITOR == "YES" ) {
-echo '<button class="button link" onclick="playAudioToggle(8080, this)"><b>&nbsp;&nbsp;&nbsp;<img src=images/speaker.png alt="" style="vertical-align:middle">&nbsp;&nbsp;RX Monitor&nbsp;&nbsp;&nbsp;</b></button>';}
+    if (DISPLAYNAME == "YES" && file_exists(DMRIDDATPATH."/DMRIds.dat") && ! empty(DMRIDDATPATH."/DMRIds.dat")) { echo "<th>Name</th>"; }
 ?>
-</div></center>
-</div>
+      <th>Target</th>
+      <th>Src</th>
+      <th>Dur(s)</th>
+      <th>Loss</th>
+      <th>BER</th>
+    </tr>
 <?php
-function getMMDVMConfigFileContent() {
-		// loads ini fule into array for further use 
-		$conf = array();
-		if ($configs = @fopen('/opt/MMDVM_Bridge/MMDVM_Bridge.ini', 'r')) {
-			while ($config = fgets($configs)) {
-				array_push($conf, trim ( $config, " \t\n\r\0\x0B"));
-			}
-			fclose($configs);
+$i = 0;
+for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
+	if (isset($lastHeard[$i])) {
+		$listElem = $lastHeard[$i];
+		if ( $listElem[2] ) {
+			$utc_time = $listElem[0];
+                        $utc_tz =  new DateTimeZone('UTC');
+                        $local_tz = new DateTimeZone(date_default_timezone_get ());
+                        $dt = new DateTime($utc_time, $utc_tz);
+                        $dt->setTimeZone($local_tz);
+                        $local_time = strftime('%H:%M:%S %b %d', $dt->getTimestamp());
+
+		echo"<tr>";
+		echo"<td align=\"left\">&nbsp;$local_time</td>";
+		echo"<td align=\"left\" style=\"color:green; font-weight:bold;\">&nbsp;$listElem[1]</td>";
+		if ((is_numeric($listElem[2]) || strpos($listElem[2], "openSPOT") !== FALSE) && (strlen($listElem[2])==7)) {
+		    echo "<td align=\"left\" style=\"color:#464646;\">&nbsp;<a href=\"https://database.radioid.net/database/view?id=$listElem[2]\" target=\"_blank\"><span style=\"color:#464646;font-weight:bold;\">$listElem[2]</span></a></td>";
+		} elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])|| $listElem[2] == "N0CALL") {
+ 	                       echo "<td align=\"left\" style=\"color:#464646;\"><b>&nbsp;$listElem[2]</b></td>";
+		} else {
+		    if (strpos($listElem[2],"-") > 0) { $listElem[2] = substr($listElem[2], 0, strpos($listElem[2],"-")); }
+			    if ( $listElem[3] && $listElem[3] != '    ' ) {
+			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#464646;font-weight:bold;\">/$listElem[3]</span></td>";
+		    } else {
+			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
+		    }
 		}
-		return $conf;
+		// Display NAME by DV8AWC
+		if ( DISPLAYNAME == "YES" && file_exists(DMRIDDATPATH."/DMRIds.dat") && ! empty(DMRIDDATPATH."/DMRIds.dat")) {
+		$arr2 = $listElem[2];
+		if (is_numeric($arr2) || $arr2 == "FCS" || $arr2 == "MMDVM" || $arr2 == "P25"|| $arr2 == "N0CALL") {
+			echo "<td align=\"left\" style=\"font-weight:bold;color:#464646;\">&nbsp;<b>&nbsp;</b></td>";
+		} else {
+			$pos = strpos($dmrIDline, $arr2." ");
+			if ($pos != false) {
+				$name = substr($dmrIDline, ($pos + strlen($arr2." ")));
+				$name = ltrim($name, " ");
+				$x = strpos($name, "\n");
+				$y = strpos($name, " ");
+				$name = rtrim($name, " ");
+				if ($x < $y) {
+					$name = substr($name, 0, $x);
+					echo "<td align=\"left\" style=\"font-weight:bold;color:#464646;\">&nbsp;<b>".$name."</b></td>";
+				} else {
+					$name = substr($name, 0, $y);
+					echo "<td align=\"left\" style=\"font-weight:bold;color:#464646;\">&nbsp;<b>".$name."</b></td>";
+				}
+			} else {
+				echo "<td align=\"left\" style=\"font-weight:bold;color:#464646;\">&nbsp;<b>&nbsp;</b></td>";
+			}
+		    }
+		}
+		if (strlen($listElem[4]) == 1) { $listElem[4] = str_pad($listElem[4], 8, " ", STR_PAD_LEFT); }
+		if ( substr($listElem[4], 0, 6) === 'CQCQCQ' ) {
+			echo "<td align=\"left\">&nbsp;<span style=\"color:#b5651d;font-weight:bold;\">$listElem[4]</span></td>";
+		} else {
+			echo "<td align=\"left\">&nbsp;<span style=\"color:#b5651d;font-weight:bold;\">".str_replace(" ","&nbsp;", $listElem[4])."</span></td>";
+		}
+
+
+		if ($listElem[5] == "LNet"){
+			echo "<td style=\"background:#1d1;\">LNet</td>";
+		}else{
+			echo "<td>$listElem[5]</td>";
+		}
+		if ($listElem[6] == null) {
+                             if ($listElem[1] == "DMR Slot 2" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#f93;\">&nbsp;&nbsp;&nbsp;RX DMR&nbsp;&nbsp;&nbsp;</td>";}
+                             if ($listElem[1] == "DMR Slot 1" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#f93;\">&nbsp;&nbsp;&nbsp;RX DMR&nbsp;&nbsp;&nbsp;</td>";}
+                             if ($listElem[1] == "YSF" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#ff9;\">&nbsp;&nbsp;&nbsp;RX YSF&nbsp;&nbsp;&nbsp;</td>";}
+                             if ($listElem[1] == "P25" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#f9f;\">&nbsp;&nbsp;&nbsp;RX P25&nbsp;&nbsp;&nbsp;</td>";}
+			     if ($listElem[1] == "NXDN" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#c9f;\">&nbsp;&nbsp;&nbsp;RX NXDN&nbsp;&nbsp;</td>";}
+                             if ($listElem[1] == "D-Star" && $listElem[5] == "Net")  {echo "<td colspan=\"3\" style=\"background:#ade;\">&nbsp;&nbsp;&nbsp;RX D-Star</td>";}
+                             if ($listElem[5] == "LNet")  {echo "<td colspan=\"3\" style=\"background:#f33;\">TX</td>";}
+			} else if ($listElem[6] == "DMR Data") {
+				echo "<td colspan=\"3\" style=\"background:#1d1;\">DMR Data</td>";
+			} else if ($listElem[6] == "GPS") {
+				echo "<td colspan=\"3\" style=\"background:#1d1;\"><a style=\"display:block;\" target=\"_blank\" href=https://www.openstreetmap.org/?mlat=".floatval($listElem[9])."&mlon=".floatval($listElem[10])."><b>GPS</b></a></td>";
+			} else {
+			echo "<td>$listElem[6]</td>";
+
+			// Colour the Loss Field
+			if (floatval($listElem[7]) < 1) { echo "<td>$listElem[7]</td>"; }
+			elseif (floatval($listElem[7]) == 1) { echo "<td style=\"background:#1d1;\">$listElem[7]</td>"; }
+			elseif (floatval($listElem[7]) > 1 && floatval($listElem[7]) <= 3) { echo "<td style=\"background:#fa0;\">$listElem[7]</td>"; }
+			else { echo "<td style=\"background:#f33;color:#f9f9f9;\">$listElem[7]</td>"; }
+
+			// Colour the BER Field
+			if (floatval($listElem[8]) == 0) { echo "<td>$listElem[8]</td>"; }
+			elseif (floatval($listElem[8]) >= 0.0 && floatval($listElem[8]) <= 1.9) { echo "<td style=\"background:#1d1;\">$listElem[8]</td>"; }
+			elseif (floatval($listElem[8]) >= 2.0 && floatval($listElem[8]) <= 4.9) { echo "<td style=\"background:#fa0;\">$listElem[8]</td>"; }
+			else { echo "<td style=\"background:#f33;color:#f9f9f9;\">$listElem[8]</td>"; }
+		}
+		echo"</tr>\n";
+		}
 	}
-
-$mmdvmconfigfile = getMMDVMConfigFileContent();
-    echo '<table style="border:none; border-collapse:collapse; cellspacing:0; cellpadding:0; background-color:#fafafa;"><tr style="border:none;background-color:#fafafa;">';
-    echo '<td width="200px" valign="top" class="hide" style="border:none;background-color:#fafafa;">';
-    echo '<div class="nav">'."\n";
-    echo '<script type="text/javascript">'."\n";
-    echo 'function reloadModeInfo(){'."\n";
-    echo '  $("#modeInfo").load("include/status.php",function(){ setTimeout(reloadModeInfo,1000) });'."\n";
-    echo '}'."\n";
-    echo 'setTimeout(reloadModeInfo,1000);'."\n";
-    echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-    echo '<div id="modeInfo">'."\n";
-    include 'include/status.php';			// Mode and Networks Info
-    
-    echo '</div>'."\n";
-    echo '</div>'."\n";
-    echo '</td>'."\n";
-
-    echo '<td valign="top" style="border:none; height: 480px; background-color:#fafafa;">';
-    echo '<div class="content">'."\n";
-    echo '<script type="text/javascript">'."\n";define("RXMON","YES");define("RXMON","YES");
-
-
-    echo 'function reloadLocalTx(){'."\n";
-    echo '  $("#localTxs").load("include/localtx.php",function(){ setTimeout(reloadLocalTx,1500) });'."\n";
-    echo '}'."\n";
-  
-    echo 'setTimeout(reloadLocalTx,1500);'."\n";
- 
-    
-    echo 'function reloadLastHerd(){'."\n";
- 
-    echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
-    echo '}'."\n";
-    echo 'setTimeout(reloadLastHerd,1500);'."\n";
-    echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-        
-    echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-    echo '<center><div id="lastHerd">'."\n";
-    include 'include/lh.php';
-    echo '</div></center>'."\n";
-    echo "<br />\n";
-
-    //echo '<center><div id="localTxs">'."\n";
-    //include 'include/localtx.php';
-    //echo '</div></center>'."\n";
-    echo '</td>';
-?>
-</tr></table>
-<?php
-    echo '<div class="content2">'."\n";
-    echo '<script type="text/javascript">'."\n";
-    echo 'function reloadSysInfo(){'."\n";
-    echo '  $("#sysInfo").load("include/system.php",function(){ setTimeout(reloadSysInfo,15000) });'."\n";
-    echo '}'."\n";
-    echo 'setTimeout(reloadSysInfo,15000);'."\n";
-    echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-    echo '<div id="sysInfo">'."\n";
-    include 'include/system.php';		// Basic System Info
-    echo '</div>'."\n";
-    echo '</div>'."\n";
+}
 
 ?>
-<div class="content">
-<center><span style="font: 7pt arial, sans-serif;">DVSwitch Dashboard <?php $cdate=date("Y"); if ($cdate > "2020") {$cdate="2020-".date("Y");} echo $cdate; ?>
-	 
-    <br>Dashboard based on Pi-Star Dashboard, © Andy Taylor (MW0MWZ) and adapted to DVSwitch by SP2ONG</span><br>
-
-    </center>
-<!-- DVSwitch Dashboard: version 20220225 -->
-
-	</div>
-</div>
-
-<div>
-<?php
-    echo '<div class="button link_verde" style="font: 12pt arial, sans-serif;">'."\n";
-    echo "Sistema Activo: &nbsp;&nbsp;&nbsp;** ".$abinfo['tlv']['ambe_mode']." **"; 
-    ?> 
-</div>
-
-<?php
-    echo '<div class="button link_naranja" style="font: 12pt arial, sans-serif;">'."\n";
-    echo "Port TXPort: &nbsp;&nbsp;&nbsp;** ".$abinfo['usrp']['tx_port']." **";
-    ?>
-
+  </table>
 </fieldset>
 
-<div>
-<button class="button link_dmr" ><a href="/dvs/brandmeister.php" class="btn btn-danger" style="color:#fff;">MODE BM</a</buttton>
-<button class="button link_dmr"><a href="/dvs/dmrplus.php" class="btn btn-danger" style="color:#fff;">MODE DMR+</a</buttton>
-<button class="button link_especial"><a href="/dvs/especial.php" class="btn btn-danger" style="color:#fff;">MODE ESPECIAL</a</buttton>
-<button class="button link_dstar"><a href="/dvs/config/cambiar_dstar.php" class="btn btn-success" style="color:#fff;">MODE DSTAR</a</buttton>
-<button class="button link_nxdn"><a href="/dvs/config/cambiar_nxdn.php" class="btn btn-danger" style="color:#fff;">MODE NXDN</a</buttton>
-<button class="button link_ysf"><a href="/dvs/config/cambiar_ysf.php" class="btn btn-danger" style="color:#fff;">MODE YSF</a</buttton>
-<button class="button link_dmr"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
-<button class="button link_dmr"><a href="/dvs/tgif.php" class="btn btn-danger" style="color:#fff;">MODE TGIF</a</buttton>
-
-<button class="button link_naranja"><a href="/dvs/freedmr.php" class="btn btn-danger" style="color:#fff;">MODE FREEDMR</a</buttton>
-
-</div>
-
-<div>
-<button class="button link_naranja"><a href="/dvs/config/sistema_plus.php" class="btn btn-danger" style="color:#fff;">EDITAR DMR+</a</buttton>
-<button class="button link_naranja"><a href="/dvs/config/sistema_brandmeister.php" class="btn btn-danger" style="color:#fff;">EDITAR BM</a</buttton>
-
-<button class="button link_naranja"><a href="/dvs/config/sistema_tgif.php" class="btn btn-danger" style="color:#fff;">EDITAR TGIF</a</buttton>
-
-
-
-<button class="button link_naranja"><a href="/dvs/config/sistema_freedmr.php" class="btn btn-danger" style="color:#fff;">EDITAR FREEDMR</a</buttton>
-
-
-
-
-<button class="button link_naranja"><a href="/dvs/config/sistema_especial.php" class="btn btn-success" style="color:#fff;">EDITAR ESPECIAL</a</buttton>
-<button class="button link_verde"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
-</div>
-
-<div>
-<button class="button link_rojo"><a href="/dvs/config/editor_general.php" style="color:#fff;">EDITOR GENERAL</a</buttton>
-<!-- <button class="button link_verde_claro" ><a href="/dvs/config/activar_dvswitch.php"  style="color:#000;">ACTIVAR DVSWITCH</a</buttton>
-<button class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
- --></div> 
-
- <div>
-<button class="button link_naranja"><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
-</div>
-
-
-<?php
-        $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');
-        if ($aa=="DVSWITCH-HBLINK_ACTIVADO=OK"){ 
-?>
-<head> 
-<div>
-<button class="button link_verde_claro" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#000;">DESACTIVAR DVSWITCH & HBLINK</a</buttton>
-</div> 
-<button class="bt btn-link btn-sm" name="cerrar_BM" onclick="desconectar_bm()"><img src="imagenes/ON.png" width="90" alt=""/><a href="panel_control.php" ></a></button> 
-</head>
-        
-        <?php
-        }
-        else {
-        ?>
-<head> 
-<div>
-<button class="button link_rojo" ><a href="/dvs/config/activar_hblink.php" class="btn btn-danger" style="color:#FFF;">ACTIVAR DVSWITCH & HBLINK</a</buttton>
-</div>
-<button class="bt btn-link btn-sm" name="cerrar_BM" onclick="conectar_bm()"><img src="imagenes/OFF.png" width="90" alt=""/><a href="panel_control.php" ></a></button>
-</head>
-
-<?php
-        }
-        
-        ?>
-
-
-<script>
-function abre_caja_cambia_port(){
-    $("#caja_cambiar_port").css("display","block");
-}
-</script>
-</body>
-</html>
