@@ -3,12 +3,12 @@ include_once dirname(dirname(__FILE__)).'/include/config.php';
 include_once dirname(dirname(__FILE__)).'/include/tools.php';        
 include_once dirname(dirname(__FILE__)).'/include/functions.php';    
 ?>
-<fieldset style="width:650px;margin-top:3px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 3px; border-top-right-radius: 3px;border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;height:99px;">
+<fieldset style="width:650px;margin-top:3px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 3px; border-top-right-radius: 3px;border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;height:199px;">
   <table style="margin-top:3px;">
 
 <?php
 $i = 0;
-for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
+for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls 
 	if (isset($lastHeard[$i])) {
 		$listElem = $lastHeard[$i];
 		if ( $listElem[2] ) {
