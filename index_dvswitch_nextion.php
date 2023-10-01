@@ -94,7 +94,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '</div>'."\n";
     echo '</td>'."\n";
 
-    echo '<td valign="top" style="border:none; height: 480px; background-color:#000000;">';
+    echo '<td valign="top" style="border:none; height: 480px; background-color:#fafafa;">';
     echo '<div class="content">'."\n";
     echo '<script type="text/javascript">'."\n";define("RXMON","YES");define("RXMON","YES");
 
