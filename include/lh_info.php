@@ -42,7 +42,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 		} else {
 		    if (strpos($listElem[2],"-") > 0) { $listElem[2] = substr($listElem[2], 0, strpos($listElem[2],"-")); }
 			    if ( $listElem[3] && $listElem[3] != '    ' ) {
-			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#464646;font-weight:bold;\">/$listElem[3]</span></td>";
+			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#464646;font-weight:bold;height:60px;\">/$listElem[3]</span></td>";
 		    } else {
 			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" style=\"background:#000000;height:60px;\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
 		    }
