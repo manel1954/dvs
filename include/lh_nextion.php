@@ -3,12 +3,12 @@ include_once dirname(dirname(__FILE__)).'/include/config.php';
 include_once dirname(dirname(__FILE__)).'/include/tools.php';        
 include_once dirname(dirname(__FILE__)).'/include/functions.php';    
 ?>
-<fieldset style="width:650px;margin-top:3px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 3px; border-top-right-radius: 3px;border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;height:199px;">
+<fieldset style="width:650px;margin-top:3px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 3px; border-top-right-radius: 3px;border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;height:99px;">
   <table style="margin-top:3px;">
 
 <?php
 $i = 0;
-for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls 
+for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 	if (isset($lastHeard[$i])) {
 		$listElem = $lastHeard[$i];
 		if ( $listElem[2] ) {
@@ -25,10 +25,10 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 		    if (strpos($listElem[2],"-") > 0) { $listElem[2] = substr($listElem[2], 0, strpos($listElem[2],"-")); }
 			    if ( $listElem[3] && $listElem[3] != '    ' ) {
 			// INDICATIVO
-				echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#fff;font-size:120px;font-weight:bold;background:#000000;\">/$listElem[3]</span></td>";
+				echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#fff;font-size:60px;font-weight:bold;background:#000000;\">/$listElem[3]</span></td>";
 		    } else {
 			// INDICATIVO
-				echo "<td align=\"left\" style=\"color:#000000;font-size:100px;font-weight:bold;background:#000000;\" align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
+				echo "<td align=\"left\" style=\"color:#000000;font-size:60px;font-weight:bold;background:#000000;\" align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
 		    }
 		}
 		// Display NAME by DV8AWC
