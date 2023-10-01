@@ -115,14 +115,18 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '</script>'."\n";
            echo "<br />\n";
         echo "<br />\n";
+        echo "<br />\n";
+        echo "<br />\n";
+        echo "<br />\n";
+        echo "<br />\n";
     echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
 
-    echo '<center><div id="localTxs">'."\n";
-    include 'include/localtx.php';
-    echo '</div></center>'."\n";
+    //echo '<center><div id="localTxs">'."\n";
+    //include 'include/localtx.php';
+    //echo '</div></center>'."\n";
     echo '</td>';
 ?>
 </tr></table>
