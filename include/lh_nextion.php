@@ -88,8 +88,8 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 
 			// Colour the BER Field
 			if (floatval($listElem[8]) == 0) { echo "<td>$listElem[8]</td>"; }
-			elseif (floatval($listElem[8]) >= 0.0 && floatval($listElem[8]) <= 1.9) { echo "<td style=\"background:#D9D9D9;\">$name</td>"; }
-			elseif (floatval($listElem[8]) >= 2.0 && floatval($listElem[8]) <= 4.9) { echo "<td style=\"background:#D9D9D9;\">$name</td>"; }
+			elseif (floatval($listElem[8]) >= 0.0 && floatval($listElem[8]) <= 1.9) { echo "<td style=\"background:#D9D9D9;\">$listElem[8]</td>"; }
+			elseif (floatval($listElem[8]) >= 2.0 && floatval($listElem[8]) <= 4.9) { echo "<td style=\"background:#D9D9D9;\">$listElem[8]</td>"; }
 			else { echo "<td style=\"background:#D9D9D9;color:#f9f9f9;\">$listElem[8]</td>"; }
 		}
 		echo"</tr>\n";
