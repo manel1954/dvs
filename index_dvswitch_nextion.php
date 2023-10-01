@@ -111,7 +111,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '</script>'."\n";
     echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
-    echo '</div></center>'."\n";
+    echo '</div><br><br><br></center>'."\n";
     echo "<br />\n";
     echo '<center><div id="localTxs">'."\n";
     include 'include/localtx.php';
@@ -198,7 +198,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
  <div>
 <button class="button link_naranja"><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
+<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>--> 
 </div>
 
 
