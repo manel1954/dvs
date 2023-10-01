@@ -25,7 +25,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 		    if (strpos($listElem[2],"-") > 0) { $listElem[2] = substr($listElem[2], 0, strpos($listElem[2],"-")); }
 			    if ( $listElem[3] && $listElem[3] != '    ' ) {
 			// INDICATIVO
-				echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#000000;font-size:60px;font-weight:bold;background:#000000;\">/$listElem[3]</span></td>";
+				echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#fff;font-size:60px;font-weight:bold;background:#000000;\">/$listElem[3]</span></td>";
 		    } else {
 			// INDICATIVO
 				echo "<td align=\"left\" style=\"color:#000000;font-size:60px;font-weight:bold;background:#000000;\" align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
