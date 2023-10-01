@@ -121,7 +121,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
         echo "<br />\n";
         echo "<br />\n";
     echo '<center><div id="lastHerd">'."\n";
-    include 'include/lh_info.php';
+    include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
 
