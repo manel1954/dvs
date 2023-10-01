@@ -192,7 +192,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
  --></div> 
 
 <div>
-<button class="button link_naranja" ><a href="/dvs/config/dvswitch_info.php" class="btn btn-danger" style="color:#9af240;">TX-RX</a</buttton>
+<button class="button link_naranja" ><a href="/dvs/dvswitch_info.php" class="btn btn-danger" style="color:#9af240;">TX-RX</a</buttton>
 </div>
 
 
