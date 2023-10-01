@@ -104,8 +104,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '}'."\n";
     echo 'setTimeout(reloadLocalTx,1500);'."\n";
     echo 'function reloadLastHerd(){'."\n";
-    echo '<br><br><br><br><br>'
-        echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
+    echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
     echo '}'."\n";
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
@@ -199,7 +198,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
  <div>
 <button class="button link_naranja"><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>--> 
+<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
 </div>
 
 
