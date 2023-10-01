@@ -22,11 +22,6 @@ $callsign = substr("$callsign", 9, 11);
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
-
-<!-- refresca la página cada 60 segundo (implantado por mi) -->
-<!-- ====================================================== -->
-<meta http-equiv="refresh" content="600" />
-
 <link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">
     <title>DVSwitch Dashboard</title>
 <?php include_once "include/browserdetect.php"; ?>
@@ -196,15 +191,15 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
  --></div> 
 
-<div>
-<button class="button link_naranja"><a href="/dvs/index_dvswitch_nextion.php" class="btn btn-danger" style="color:#9af240;">TX-RX</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
-</div>
+<!-- <div>
+<button2 class="button2 link_verde_claro" ><a href="/dvs/config/activar_hblink.php" class="btn btn-danger" style="color:#9af240;">ACTIVAR HBLINK</a</buttton>
+<button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>
+</div> -->
 
 
 <?php
         $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');
-        if ($aa=="DVSWITCH-HBLINK_ACTIVADO=OK"){ 
+        if ($aa=="ON"){ 
 ?>
 <head> 
 <div>
