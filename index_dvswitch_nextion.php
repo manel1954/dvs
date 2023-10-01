@@ -65,7 +65,7 @@ echo '<button class="button link" onclick="playAudioToggle(8080, this)"><b>&nbsp
 </div>
 <?php
 function getMMDVMConfigFileContent() {
-		// loads ini fule into array for further use
+		// loads ini fule into array for further use 
 		$conf = array();
 		if ($configs = @fopen('/opt/MMDVM_Bridge/MMDVM_Bridge.ini', 'r')) {
 			while ($config = fgets($configs)) {
