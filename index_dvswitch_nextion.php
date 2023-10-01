@@ -197,7 +197,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
  --></div> 
 
  <div>
-<button class="button link_naranja"><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEAR</a</buttton>
+<button class="button link_naranja"><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
 <!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
 </div>
 
