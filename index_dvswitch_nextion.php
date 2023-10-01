@@ -117,12 +117,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
+
     echo '<center><div id="localTxs">'."\n";
     include 'include/localtx.php';
     echo '</div></center>'."\n";
