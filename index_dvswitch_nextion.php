@@ -113,8 +113,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
     echo '</script>'."\n";
-    echo "<br />\n";
-  
+           echo "<br />\n";
+        echo "<br />\n";
     echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
     echo '</div></center>'."\n";
