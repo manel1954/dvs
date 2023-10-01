@@ -44,7 +44,7 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 			    if ( $listElem[3] && $listElem[3] != '    ' ) {
 			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" target=\"_blank\"><b>$listElem[2]</b></a><span style=\"color:#464646;font-weight:bold;height:60px;\">/$listElem[3]</span></td>";
 		    } else {
-			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" style=\"background:#f00;height:60px;\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
+			echo "<td align=\"left\">&nbsp;<a href=\"http://www.qrz.com/db/$listElem[2]\" style=\"background:#f00;height:60px;font-size:30px\" target=\"_blank\"><b>$listElem[2]</b></a></td>";
 		    }
 		}
 		// Display NAME by DV8AWC
