@@ -21,7 +21,7 @@ include_once dirname(dirname(__FILE__)).'/include/functions.php';
     </tr>
 <?php
 $i = 0;
-for ($i = 0;  ($i <= 1); $i++) { //Last 20 calls
+for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 	if (isset($lastHeard[$i])) {
 		$listElem = $lastHeard[$i];
 		if ( $listElem[2] ) {
