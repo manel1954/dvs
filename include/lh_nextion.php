@@ -18,9 +18,9 @@ for ($i = 0;  ($i <= 0); $i++) { //Last 20 calls
 		// DMR Slot
 		echo"<td align=\"center\" style=\"color:black; font-weight:bold;font-size:20px;background:#D9D9D9;\">&nbsp;$listElem[1]</td>";
 		if ((is_numeric($listElem[2]) || strpos($listElem[2], "openSPOT") !== FALSE) && (strlen($listElem[2])==7)) {
-		    echo "<td align=\"center\" style=\"color:#ff0;background:#D9D9D9;\" style=\"height:90px;\">&nbsp;<a href=\"https://database.radioid.net/database/view?id=$listElem[2]\" target=\"_blank\"><span style=\"color:#ff0;font-weight:bold;font-size:60px;background:#D9D9D9;\">$listElem[2]</span></a></td>";
+		    echo "<td align=\"center\" style=\"color:#f00;background:#D9D9D9;\" style=\"height:90px;\">&nbsp;<a href=\"https://database.radioid.net/database/view?id=$listElem[2]\" target=\"_blank\"><span style=\"color:#f00;font-weight:bold;font-size:60px;background:#D9D9D9;\">$listElem[2]</span></a></td>";
 		} elseif (!preg_match('/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/', $listElem[2])|| $listElem[2] == "N0CALL") {
- 	                       echo "<td align=\"center\" style=\"color:#ff0;font-size:20px;background:#D9D9D9;\"><b>&nbsp;$listElem[2]</b></td>";
+ 	                       echo "<td align=\"center\" style=\"color:#f00;font-size:20px;background:#D9D9D9;\"><b>&nbsp;$listElem[2]</b></td>";
 		} else {
 		    if (strpos($listElem[2],"-") > 0) { $listElem[2] = substr($listElem[2], 0, strpos($listElem[2],"-")); }
 			    if ( $listElem[3] && $listElem[3] != '    ' ) {
