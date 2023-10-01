@@ -114,7 +114,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '$(window).trigger(\'resize\');'."\n";
     echo '</script>'."\n";
     echo "<br />\n";
-    echo "<br />\n";
+  
     echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
     echo '</div></center>'."\n";
