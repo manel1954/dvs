@@ -104,7 +104,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '}'."\n";
     echo 'setTimeout(reloadLocalTx,1500);'."\n";
     echo 'function reloadLastHerd(){'."\n";
-    echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
+    echo '<br><br><br><br><br>'
+        echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
     echo '}'."\n";
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
