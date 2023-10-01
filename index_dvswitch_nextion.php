@@ -107,6 +107,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
  
     
     echo 'function reloadLastHerd(){'."\n";
+        echo "<br />\n";
+        echo "<br />\n";
     echo '  $("#lastHerd").load("include/lh_nextion.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
     echo '}'."\n";
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
