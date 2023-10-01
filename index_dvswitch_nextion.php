@@ -94,7 +94,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '</div>'."\n";
     echo '</td>'."\n";
 
-    echo '<td valign="top" style="border:none; height: 480px; background-color:#fafafa;">';
+    echo '<td valign="top" style="border:none; height: 480px; background-color:#000000;">';
     echo '<div class="content">'."\n";
     echo '<script type="text/javascript">'."\n";define("RXMON","YES");define("RXMON","YES");
 
@@ -109,7 +109,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
     echo '</script>'."\n";
-    echo '<center><div id="lastHerd"><br><br><br>'."\n";
+    echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
