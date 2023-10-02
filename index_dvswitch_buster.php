@@ -22,6 +22,11 @@ $callsign = substr("$callsign", 9, 11);
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
+
+<!-- refresca la página cada 60 segundo (implantado por mi) -->
+<!-- ====================================================== -->
+<meta http-equiv="refresh" content="600" />
+
 <link rel="shortcut icon" href="images/favicon.ico" sizes="16x16 32x32" type="image/png">
     <title>DVSwitch Dashboard</title>
 <?php include_once "include/browserdetect.php"; ?>
@@ -128,6 +133,9 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo '</div>'."\n";
     echo '</div>'."\n";
 
+
+
+
 ?>
 <div class="content">
 <center><span style="font: 7pt arial, sans-serif;">DVSwitch Dashboard <?php $cdate=date("Y"); if ($cdate > "2020") {$cdate="2020-".date("Y");} echo $cdate; ?>
@@ -163,24 +171,14 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_ysf"><a href="/dvs/config/cambiar_ysf.php" class="btn btn-danger" style="color:#fff;">MODE YSF</a</buttton>
 <button class="button link_dmr"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
 <button class="button link_dmr"><a href="/dvs/tgif.php" class="btn btn-danger" style="color:#fff;">MODE TGIF</a</buttton>
-
 <button class="button link_naranja"><a href="/dvs/freedmr.php" class="btn btn-danger" style="color:#fff;">MODE FREEDMR</a</buttton>
-
 </div>
 
 <div>
 <button class="button link_naranja"><a href="/dvs/config/sistema_plus.php" class="btn btn-danger" style="color:#fff;">EDITAR DMR+</a</buttton>
 <button class="button link_naranja"><a href="/dvs/config/sistema_brandmeister.php" class="btn btn-danger" style="color:#fff;">EDITAR BM</a</buttton>
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_tgif.php" class="btn btn-danger" style="color:#fff;">EDITAR TGIF</a</buttton>
-
-
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_freedmr.php" class="btn btn-danger" style="color:#fff;">EDITAR FREEDMR</a</buttton>
-
-
-
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_especial.php" class="btn btn-success" style="color:#fff;">EDITAR ESPECIAL</a</buttton>
 <button class="button link_verde"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
 </div>
@@ -188,13 +186,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <div>
 <button class="button link_rojo"><a href="/dvs/config/editor_general.php" style="color:#fff;">EDITOR GENERAL</a</buttton>
 <button class="button link_naranja" ><a href="/dvs/dvswitch_info.php" class="btn btn-danger" style="color:#9af240;">TX-RX</a</buttton>
-<!-- <button class="button link_verde_claro" ><a href="/dvs/config/activar_dvswitch.php"  style="color:#000;">ACTIVAR DVSWITCH</a</buttton>
-<button class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
- --></div> 
-
-<div>
-</div>
-
+</div> 
 
 <?php
         $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');

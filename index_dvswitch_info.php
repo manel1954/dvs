@@ -101,33 +101,24 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
     echo 'function reloadLocalTx(){'."\n";
     echo '  $("#localTxs").load("include/localtx.php",function(){ setTimeout(reloadLocalTx,1500) });'."\n";
-    echo '}'."\n";
-  
-    echo 'setTimeout(reloadLocalTx,1500);'."\n";
- 
-    
-    echo 'function reloadLastHerd(){'."\n";
- 
+    echo '}'."\n"; 
+    echo 'setTimeout(reloadLocalTx,1500);'."\n";    
+    echo 'function reloadLastHerd(){'."\n"; 
     echo '  $("#lastHerd").load("include/lh_info.php",function(){ setTimeout(reloadLastHerd,1500) });'."\n";
     echo '}'."\n";
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-        
+    echo '</script>'."\n";        
     echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
-        echo "<br />\n";
+    echo "<br />\n";
+    echo "<br />\n";
+    echo "<br />\n";
+    echo "<br />\n";
+    echo "<br />\n";
     echo '<center><div id="lastHerd">'."\n";
     include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
-
-    //echo '<center><div id="localTxs">'."\n";
-    //include 'include/localtx.php';
-    //echo '</div></center>'."\n";
     echo '</td>';
 ?>
 </tr></table>
@@ -180,39 +171,22 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_ysf"><a href="/dvs/config/cambiar_ysf.php" class="btn btn-danger" style="color:#fff;">MODE YSF</a</buttton>
 <button class="button link_dmr"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
 <button class="button link_dmr"><a href="/dvs/tgif.php" class="btn btn-danger" style="color:#fff;">MODE TGIF</a</buttton>
-
 <button class="button link_naranja"><a href="/dvs/freedmr.php" class="btn btn-danger" style="color:#fff;">MODE FREEDMR</a</buttton>
-
 </div>
 
 <div>
 <button class="button link_naranja"><a href="/dvs/config/sistema_plus.php" class="btn btn-danger" style="color:#fff;">EDITAR DMR+</a</buttton>
 <button class="button link_naranja"><a href="/dvs/config/sistema_brandmeister.php" class="btn btn-danger" style="color:#fff;">EDITAR BM</a</buttton>
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_tgif.php" class="btn btn-danger" style="color:#fff;">EDITAR TGIF</a</buttton>
-
-
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_freedmr.php" class="btn btn-danger" style="color:#fff;">EDITAR FREEDMR</a</buttton>
-
-
-
-
 <button class="button link_naranja"><a href="/dvs/config/sistema_especial.php" class="btn btn-success" style="color:#fff;">EDITAR ESPECIAL</a</buttton>
 <button class="button link_verde"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
 </div>
 
 <div>
 <button class="button link_rojo"><a href="/dvs/config/editor_general.php" style="color:#fff;">EDITOR GENERAL</a</buttton>
-<!-- <button class="button link_verde_claro" ><a href="/dvs/config/activar_dvswitch.php"  style="color:#000;">ACTIVAR DVSWITCH</a</buttton>
-<button class="button link_rojo" ><a href="/dvs/config/desactivar_dvswitch.php" class="btn btn-danger" style="color:#fff;">DESACTIVAR DVSWITCH</a</buttton>
- --></div> 
-
- <div>
 <button class="button link_naranja"><a href="/dvs/index_dvswitch_info.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
-<!-- <button2 class="button2 link_rojo" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#f00;">DESACTIVAR HBLINK</a</buttton>-->
-</div>
-
+</div> 
 
 <?php
         $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');
