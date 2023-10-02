@@ -186,14 +186,14 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <div>
 <button class="button link_rojo"><a href="/dvs/config/editor_general.php" style="color:#fff;">EDITOR GENERAL</a</buttton>
 <button class="button link_especial" ><a href="/dvs/index_dvswitch_info.php" class="btn btn-danger" style="color:#9af240;">TX-RX</a</buttton>
-</div> 
+<!-- </div>  -->
 
 <?php
         $aa = exec('awk "NR==1{print;exit}" /var/www/html/dvs/config/estado-dvswitch-hblink.txt');
         if ($aa=="ON"){ 
 ?>
 <head> 
-<div>
+<!-- <div> -->
 <button class="button link_verde_claro" ><a href="/dvs/config/desactivar_hblink.php" class="btn btn-danger" style="color:#000;">DESACTIVAR DVSWITCH & HBLINK</a</buttton>
 </div> 
 <button class="bt btn-link btn-sm" name="cerrar_BM" onclick="desconectar_bm()"><img src="imagenes/ON.png" width="90" alt=""/><a href="panel_control.php" ></a></button> 
