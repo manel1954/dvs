@@ -171,8 +171,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_dstar"><a href="/dvs/config/cambiar_dstar.php" class="btn btn-success" style="color:#fff;">MODE DSTAR</a</buttton>
 <button class="button link_nxdn"><a href="/dvs/config/cambiar_nxdn.php" class="btn btn-danger" style="color:#fff;">MODE NXDN</a</buttton>
 <button class="button link_ysf"><a href="/dvs/config/cambiar_ysf.php" class="btn btn-danger" style="color:#fff;">MODE YSF</a</buttton>
-<!-- <button class="button link_especial"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
- -->
+<button class="button link_especial"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
+
 
 </div>
 
