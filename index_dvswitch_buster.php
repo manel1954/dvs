@@ -175,11 +175,12 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 </div>
 
 <div>
-<button class="button link_naranja"><a href="/dvs/config/sistema_plus.php" class="btn btn-danger" style="color:#fff;">EDITAR DMR+</a</buttton>
 <button class="button link_naranja"><a href="/dvs/config/sistema_brandmeister.php" class="btn btn-danger" style="color:#fff;">EDITAR BM</a</buttton>
+<button class="button link_naranja"><a href="/dvs/config/sistema_plus.php" class="btn btn-danger" style="color:#fff;">EDITAR DMR+</a</buttton>
+<button class="button link_naranja"><a href="/dvs/config/sistema_especial.php" class="btn btn-success" style="color:#fff;">EDITAR ESPECIAL</a</buttton>
 <button class="button link_naranja"><a href="/dvs/config/sistema_tgif.php" class="btn btn-danger" style="color:#fff;">EDITAR TGIF</a</buttton>
 <button class="button link_naranja"><a href="/dvs/config/sistema_freedmr.php" class="btn btn-danger" style="color:#fff;">EDITAR FREEDMR</a</buttton>
-<button class="button link_naranja"><a href="/dvs/config/sistema_especial.php" class="btn btn-success" style="color:#fff;">EDITAR ESPECIAL</a</buttton>
+
 <button class="button link_verde"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
 </div>
 
