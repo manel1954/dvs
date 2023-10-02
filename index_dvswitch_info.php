@@ -191,10 +191,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
 
 
-<?php
-        }
-        
-        ?>
+
 
 
 <script>
