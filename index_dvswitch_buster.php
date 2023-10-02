@@ -171,7 +171,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_dstar"><a href="/dvs/config/cambiar_dstar.php" class="btn btn-success" style="color:#fff;">MODE DSTAR</a</buttton>
 <button class="button link_nxdn"><a href="/dvs/config/cambiar_nxdn.php" class="btn btn-danger" style="color:#fff;">MODE NXDN</a</buttton>
 <button class="button link_ysf"><a href="/dvs/config/cambiar_ysf.php" class="btn btn-danger" style="color:#fff;">MODE YSF</a</buttton>
-<button class="button link_dmr"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
+<button class="button link_especial"><a href="/dvs/fcs.php" class="btn btn-danger" style="color:#fff;">MODE FCS</a</buttton>
 
 
 </div>
@@ -183,7 +183,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 <button class="button link_dmr"><a href="/dvs/config/sistema_tgif.php" class="btn btn-danger" style="color:#000;">EDITAR TGIF</a</buttton>
 <button class="button link_dmr"><a href="/dvs/config/sistema_freedmr.php" class="btn btn-danger" style="color:#000;">EDITAR FREEDMR</a</buttton>
 
-<button class="button link_verde"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
+<button class="button link_naranja"><a href="/dvs/config/actualiza_reflectores.php" class="btn btn-success" style="color:#fff;">ACTUALIZAR REFLECTORES</a</buttton>
 </div>
 
 <div>
