@@ -184,9 +184,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 </div>
 
 <div>
-<button class="button link_rojo"><a href="/dvs/config/editor_general.php" style="color:#fff;">EDITOR GENERAL</a</buttton>
 <button class="button link_especial" ><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER A LAST HEARD</a</buttton>
-<!-- </div> --> 
+</div> 
 
 
 
