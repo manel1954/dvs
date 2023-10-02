@@ -44,7 +44,7 @@ display: none;
 }
     </style>
 </head>
-<body style="background-image: url(http://www.associacioader.com/img/fondo_02.png);font: 11pt arial, sans-serif;">
+<body style="background-image: url(images/fondo_02.png);font: 11pt arial, sans-serif;">
 <center>
 <fieldset style="box-shadow:0 0 10px #999; background-color:#fafafa; width:0px;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
 <div class="container"> 

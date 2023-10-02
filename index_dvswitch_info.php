@@ -39,29 +39,32 @@ $callsign = substr("$callsign", 9, 11);
     <link href="css/featherlight.css" type="text/css" rel="stylesheet" />
     <script src="scripts/featherlight.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
+
 #caja_cambiar_port{     
 display: none;   
 }
     </style>
 </head>
-<body style="background-image: url(http://www.associacioader.com/img/fondo_02.png);font: 11pt arial, sans-serif;">
+<body style="background-image: url(images/fondo_02.png);font: 11pt arial, sans-serif;">
 <center>
-<fieldset style="box-shadow:0 0 10px #999; background-color:#fafafa; width:0px;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-<div class="container"> 
-<div class="header">
+<fieldset style="box-shadow:0 0 10px #999; background-color:#000; width:0px;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+<div style="margin-top:8px;background:#000;" class="container"> 
+<div class="header" style="margin-top:8px;background:#341434;">
 <center>
 <h2>DVSwitch Dashboard&nbsp;&nbsp;<?php echo $callsign;?></h2>
 <img src="Logo_Ader.png" width="120" alt=""/></img>
 </center>
 </div>
-<div class="content"><center>
-<div style="margin-top:8px;">
+<div style="margin-top:8px;background:#000;" class="content">
+<center>
+<div style="margin-top:8px;background:#000;">
 
 <?php
 if ( RXMONITOR == "YES" ) {
 echo '<button class="button link" onclick="playAudioToggle(8080, this)"><b>&nbsp;&nbsp;&nbsp;<img src=images/speaker.png alt="" style="vertical-align:middle">&nbsp;&nbsp;RX Monitor&nbsp;&nbsp;&nbsp;</b></button>';}
 ?>
-</div></center>
+</div>
+</center>
 </div>
 <?php
 function getMMDVMConfigFileContent() {
@@ -77,7 +80,7 @@ function getMMDVMConfigFileContent() {
 	}
 
 $mmdvmconfigfile = getMMDVMConfigFileContent();
-    echo '<table style="border:none; border-collapse:collapse; cellspacing:0; cellpadding:0; background-color:#fafafa;"><tr style="border:none;background-color:#fafafa;">';
+    /* echo '<table style="border:none; border-collapse:collapse; cellspacing:0; cellpadding:0; background-color:#fafafa;"><tr style="border:none;background-color:#fafafa;">';
     echo '<td width="200px" valign="top" class="hide" style="border:none;background-color:#fafafa;">';
     echo '<div class="nav">'."\n";
     echo '<script type="text/javascript">'."\n";
@@ -87,8 +90,8 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo 'setTimeout(reloadModeInfo,1000);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
     echo '</script>'."\n";
-    echo '<div id="modeInfo">'."\n";
-    include 'include/status.php';			// Mode and Networks Info
+    echo '<div id="modeInfo">'."\n"; */
+    //include 'include/status.php';			// Mode and Networks Info
     
     echo '</div>'."\n";
     echo '</div>'."\n";
@@ -109,40 +112,27 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     echo 'setTimeout(reloadLastHerd,1500);'."\n";
     echo '$(window).trigger(\'resize\');'."\n";
     echo '</script>'."\n";        
+/*     echo "<br />\n";
     echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
-    echo "<br />\n";
+    echo "<br />\n"; */
+/*     echo "<br />\n";
+    echo "<br />\n"; */
     echo "<br />\n";
     echo '<center><div id="lastHerd">'."\n";
-    include 'include/lh.php';
+   // include 'include/lh.php';
     echo '</div></center>'."\n";
     echo "<br />\n";
     echo '</td>';
 ?>
 </tr></table>
-<?php
-    echo '<div class="content2">'."\n";
-    echo '<script type="text/javascript">'."\n";
-    echo 'function reloadSysInfo(){'."\n";
-    echo '  $("#sysInfo").load("include/system.php",function(){ setTimeout(reloadSysInfo,15000) });'."\n";
-    echo '}'."\n";
-    echo 'setTimeout(reloadSysInfo,15000);'."\n";
-    echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-    echo '<div id="sysInfo">'."\n";
-    include 'include/system.php';		// Basic System Info
-    echo '</div>'."\n";
-    echo '</div>'."\n";
 
-?>
+
 <div class="content">
-<center><span style="font: 7pt arial, sans-serif;">DVSwitch Dashboard <?php $cdate=date("Y"); if ($cdate > "2020") {$cdate="2020-".date("Y");} echo $cdate; ?>
+<!-- <center><span style="font: 7pt arial, sans-serif;">DVSwitch Dashboard <?php $cdate=date("Y"); if ($cdate > "2020") {$cdate="2020-".date("Y");} echo $cdate; ?>
 	 
     <br>Dashboard based on Pi-Star Dashboard, © Andy Taylor (MW0MWZ) and adapted to DVSwitch by SP2ONG</span><br>
 
-    </center>
+    </center> -->
 <!-- DVSwitch Dashboard: version 20220225 -->
 
 	</div>
@@ -150,14 +140,14 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
 <div>
 <?php
-    echo '<div class="button link_verde" style="font: 12pt arial, sans-serif;">'."\n";
-    echo "Sistema Activo: &nbsp;&nbsp;&nbsp;** ".$abinfo['tlv']['ambe_mode']." **"; 
+/*     echo '<div class="button link_verde" style="font: 12pt arial, sans-serif;">'."\n";
+    echo "Sistema Activo: &nbsp;&nbsp;&nbsp;** ".$abinfo['tlv']['ambe_mode']." **"; */ 
     ?> 
 </div>
 
 <?php
-    echo '<div class="button link_naranja" style="font: 12pt arial, sans-serif;">'."\n";
-    echo "Port TXPort: &nbsp;&nbsp;&nbsp;** ".$abinfo['usrp']['tx_port']." **";
+/*     echo '<div class="button link_naranja" style="font: 12pt arial, sans-serif;">'."\n";
+    echo "Port TXPort: &nbsp;&nbsp;&nbsp;** ".$abinfo['usrp']['tx_port']." **"; */
     ?>
 
 </fieldset>
