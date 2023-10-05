@@ -157,7 +157,7 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
 
 
 <div>
-<button class="button link_especial" ><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER Al DASHBOARD PRINCIPAL</a</buttton>
+<button class="button link_especial" ><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER AL DASHBOARD PRINCIPAL</a</buttton>
 </div> 
 
 
