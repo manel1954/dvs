@@ -37,7 +37,7 @@
  	<br><br>
         <div class="row">
                <div class="col-md-6 col-md-offset-2 config_especial">    
-               <h1 class="texto_centrado_blanco">ACTTUALIZANDO REFLECTORES</h1>
+               <h1 class="texto_centrado_blanco">ACTUALIZANDO REFLECTORES</h1>
                </div> 	                       
         </div><!--  row -->
 </div><!--container-->
