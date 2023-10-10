@@ -9,6 +9,7 @@ exec("sudo sed -i '2c Callsign=$indicativo' /opt/MMDVM_Bridge/MMDVM_Bridge_PLUS.
 exec("sudo sed -i '2c Callsign=$indicativo' /opt/MMDVM_Bridge/MMDVM_Bridge_ESPECIAL.ini");
 exec("sudo sed -i '2c Callsign=$indicativo' /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini");
 exec("sudo sed -i '2c Callsign=$indicativo' /opt/MMDVM_Bridge/MMDVM_Bridge_TGIF.ini");
+exec("sudo sed -i '2c Callsign=$indicativo' /opt/MMDVM_Bridge/FREEDMR.ini");
 
 exec("sudo sed -i '2c gatewayCallsign=$indicativo' /etc/ircddbgateway");
 exec("sudo sed -i '13c repeaterCall1=$indicativo' /etc/ircddbgateway");
