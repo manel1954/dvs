@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso a editor_general.php</title>
+
+
+    <style>
+        /* Estilo para el botón */
+        button {
+            background-color: red; /* Color de fondo rojo */
+            color: white; /* Texto blanco */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar por el botón */
+        }
+
+        /* Cambiar apariencia al pasar el mouse por encima */
+        button:hover {
+            background-color: darkred; /* Cambia a un tono más oscuro al pasar el mouse */
+        }
+    </style>
+
+
+
+
+
     <script>
         function solicitarPassword() {
             var password = prompt("Por favor, ingresa la contraseña:");
@@ -21,6 +44,11 @@
             }
         }
     </script>
+
+
+
+
+
 </head>
 <body>
     <h1>Bienvenido</h1>
