@@ -11,9 +11,23 @@
         body{
             background:#000;
         }
+
+
+        /* Estilo para centrar los botones en la página */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Altura de la pantalla completa */
+            margin: 0;
+            flex-direction: column;
+        }
+
+
+
         /* Estilo para el botón */
         button {
-            background-color: red; /* Color de fondo rojo */
+            background-color: green; /* Color de fondo rojo */
             color: white; /* Texto blanco */
             padding: 10px 20px; /* Espaciado interno del botón */
             border: none; /* Sin borde */
@@ -22,7 +36,7 @@
         }
         /* Estilo para el botón rojo */
         .btn-verde {
-            background-color: green; /* Color de fondo rojo */
+            background-color: red; /* Color de fondo rojo */
             color: white; /* Texto blanco */
             padding: 10px 20px; /* Espaciado interno del botón */
             border: none; /* Sin borde */
