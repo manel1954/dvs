@@ -275,13 +275,7 @@ h6{
     <div class="col-md-4 config_especial"><br>     
         <h5>CONFIGURACIÓN GENERAL</h5>
 
-<form method="post" action="/dvs/config/cambia_sala_FCS.php">   
-    <div class="fondo_datos">Sala FCS:  
-        <span class="color_verde"><?php echo $fcs;?></span>
-    </div>  
-<input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
-        
-</form>
+
 
 
 
@@ -365,7 +359,13 @@ h6{
         <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"> 
 </form>
 
-
+<form method="post" action="/dvs/config/cambia_sala_FCS.php">   
+    <div class="fondo_datos">Sala FCS:  
+        <span class="color_verde"><?php echo $fcs;?></span>
+    </div>  
+<input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
+        
+</form>
 <br>
 <form method="post" action="/dvs/index_dvswitch_buster.php">
     <button class="btn btn-success btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
