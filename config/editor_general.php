@@ -293,7 +293,7 @@ h6{
 
 
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
-            <div class="fondo_datos">Indicativo: 
+            <div class="fondo_datos">Indicativoxx: 
                 <span class="color_verde"><?php echo $callsign;?></span>
             </div>
         <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter">
