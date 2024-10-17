@@ -7,6 +7,6 @@ $_SESSION['permisos'] = 1;
 header("Location:../../index.php");	
 }
 else{
-header("Location:../../dvs/index.php");
+header("Location:../../index.php");
 }
 ?>
