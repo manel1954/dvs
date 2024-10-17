@@ -83,7 +83,7 @@
     <br>
     <!-- Botón que solicita la contraseña -->
     <button class="button" onclick="solicitarPassword()">Acceder al Editor_General</button>
- 
+ <br>
     <button class="btn-verde"onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
