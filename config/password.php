@@ -29,7 +29,7 @@
     <!-- Botón que solicita la contraseña -->
     <button onclick="solicitarPassword()">Acceder al Editor_General</button>
  
-    <button onclick="window.location.href='index.php'">Volver a index.php</button>
+    <button onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
 </html>
