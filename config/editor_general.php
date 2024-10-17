@@ -283,11 +283,12 @@ h6{
 
 
 
-<form method="post" action="/dvs/config/cambia_puerto.php">
-<input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter">
+<form method="post" action="/dvs/config/cambia_puerto.php">    
     <div class="fondo_datos">Puerto USRP: 
         <span class="color_verde"><?php echo $puerto;?></span>
-    </div>         
+    </div> 
+<input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter">
+        
 </form>
 
 
