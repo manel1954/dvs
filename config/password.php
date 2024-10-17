@@ -20,14 +20,7 @@
             border-radius: 5px; /* Bordes redondeados */
             cursor: pointer; /* Cambia el cursor al pasar por el botón */
         }
-        button2 {
-            background-color: blue; /* Color de fondo rojo */
-            color: white; /* Texto blanco */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar por el botón */
-        }
+
         /* Cambiar apariencia al pasar el mouse por encima */
         button:hover {
             background-color: darkred; /* Cambia a un tono más oscuro al pasar el mouse */
