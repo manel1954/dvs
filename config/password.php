@@ -12,40 +12,49 @@
             background:#000;
         }
 
-        /* Estilo para centrar los botones horizontalmente en la parte superior */
+        /* Estilo para centrar el contenido horizontalmente en la parte superior */
         body {
             display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Alineado en la parte superior */
+            justify-content: center; /* Centrar horizontalmente */
             margin: 0;
-            padding-top: 20px; /* Pequeño espaciado desde la parte superior */
-            flex-direction: column;
+            padding-top: 20px; /* Espacio desde la parte superior */
         }
 
-
-
-
-        /* Estilo para el botón */
-        button {
-            background-color: green; /* Color de fondo rojo */
-            color: white; /* Texto blanco */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar por el botón */
+        /* Contenedor para centrar los botones y el texto */
+        .container {
+            text-align: center; /* Centrar el texto y los botones */
         }
+
         /* Estilo para el botón rojo */
-        .btn-verde {
+        .btn-rojo {
             background-color: red; /* Color de fondo rojo */
             color: white; /* Texto blanco */
             padding: 10px 20px; /* Espaciado interno del botón */
             border: none; /* Sin borde */
             border-radius: 5px; /* Bordes redondeados */
             cursor: pointer; /* Cambia el cursor al pasar por el botón */
+            margin: 10px; /* Espacio entre botones */
         }
-        /* Cambiar apariencia al pasar el mouse por encima */
-        button:hover {
+
+        /* Cambiar apariencia al pasar el mouse por el botón rojo */
+        .btn-rojo:hover {
             background-color: darkred; /* Cambia a un tono más oscuro al pasar el mouse */
+        }
+
+        /* Estilo para el botón verde */
+        .btn-verde {
+            background-color: green; /* Color de fondo verde */
+            color: white; /* Texto blanco */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar por el botón */
+            margin: 10px; /* Espacio entre botones */
+        }
+
+        /* Cambiar apariencia al pasar el mouse por el botón verde */
+        .btn-verde:hover {
+            background-color: darkgreen; /* Cambia a un tono más oscuro al pasar el mouse */
         }
     </style>
 
