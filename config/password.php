@@ -91,9 +91,9 @@
     <br>
     <br>
     <!-- Botón que solicita la contraseña -->
-    <button class="btn-rojo" onclick="solicitarPassword()">Acceder al Editor_General</button>
+    <button class="btn-verde" onclick="solicitarPassword()">Acceder al Editor_General</button>
  <br>
-    <button class="btn-verde"onclick="window.location.href='../../index.php'">VOLVER</button>
+    <button class="btn-rojo"onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
 </html>
