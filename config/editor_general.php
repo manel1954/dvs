@@ -272,7 +272,7 @@ h6{
 <!--============== CAJA LOGIN ====================================-->      
  <div class="row">
     <div class="col-md-4 config_especial"><br>     
-        <h5>CONFIGURACIÓN GENERAL</h5>
+        <h5>CONFIGURACIÓN GENERAL_AHORA</h5>
 
 <form method="post" action="/dvs/config/cambia_sala_FCS.php">
 <input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
