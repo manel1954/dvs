@@ -17,6 +17,7 @@
             } else {
                 // Muestra un mensaje de error si la contraseña es incorrecta
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
+                header("Location:../../index.php");
             }
         }
     </script>
