@@ -70,7 +70,7 @@
     <!-- Botón que solicita la contraseña -->
     <button class="button" onclick="solicitarPassword()">Acceder al Editor_General</button>
  
-    <button class="btn"onclick="window.location.href='../../index.php'">VOLVER</button>
+    <button class="btn-verde"onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
 </html>
