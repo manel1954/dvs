@@ -6,7 +6,7 @@ session_start();
 $reflector_dstar = exec("sudo sed -n '5p' /etc/ircddbgateway");
 $reflector_dstar = substr("$reflector_dstar", 12, 8);
 
-$ysf = exec("sudo sed -n '42p' opt/YSFGateway/YSFGateway.ini");
+$ysf = exec("sudo sed -n '42p' /opt/YSFGateway/YSFGateway.ini");
 $ysf = substr("$ysf", 8, 20);
 
 
