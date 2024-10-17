@@ -301,53 +301,60 @@ h6{
 
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_id.php">
-        <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
-            <div class="fondo_datos">Id: 
+<form method="post" action="/dvs/config/cambia_configuracion_id.php">            
+    <div class="fondo_datos">Id: 
                 <span class="color_verde"><?php echo $id;?></span>
             </div> 
+        <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
+
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">
-        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"> 
-            <div class="fondo_datos">Frecuencia RXF-TXF: 
+<form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
+    <div class="fondo_datos">Frecuencia RXF-TXF: 
                 <span class="color_verde"><?php echo $frecuencia;?></span>
-            </div> 
+            </div>
+        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"> 
+ 
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_latitud.php">
-        <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> 
-            <div class="fondo_datos">Latitude: 
+<form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
+    <div class="fondo_datos">Latitude: 
                 <span class="color_verde"><?php echo $latitude;?></span>
             </div> 
+        <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> 
+
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_longitud.php">
-        <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"> 
-            <div class="fondo_datos">Longitude: 
+<form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
+    <div class="fondo_datos">Longitude: 
                 <span class="color_verde"><?php echo $longitude;?></span>
             </div> 
+        <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"> 
+
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_location.php">
-        <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"> 
-            <div class="fondo_datos">Ciudad: 
+<form method="post" action="/dvs/config/cambia_configuracion_location.php">            
+    <div class="fondo_datos">Ciudad: 
                 <span class="color_verde"><?php echo $location;?></span>
             </div> 
+        <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"> 
+
 </form>
 
-<form method="post" action="/dvs/config/cambia_configuracion_url.php">
-        <input name="url" class="fuente_boton3 form-control" placeholder="Introduce Web preferida  + Enter"> 
-            <div class="fondo_datos">URL: 
+<form method="post" action="/dvs/config/cambia_configuracion_url.php">            
+    <div class="fondo_datos">URL: 
                 <span class="color_verde"><?php echo $url;?></span>
             </div> 
+        <input name="url" class="fuente_boton3 form-control" placeholder="Introduce Web preferida  + Enter"> 
+
 </form>
 
-<form method="post" action="/dvs/config/cambia_reflector_dstar.php">
-        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> 
-            <div class="fondo_datos">REFLECTOR DSTAR: 
+<form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
+    <div class="fondo_datos">REFLECTOR DSTAR: 
                 <span class="color_verde"><?php echo $reflector_dstar;?></span>
             </div> 
+        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> 
+
 </form>
 
 <br>
