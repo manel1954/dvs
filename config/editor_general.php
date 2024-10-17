@@ -354,8 +354,15 @@ h6{
                 <span class="color_verde"><?php echo $reflector_dstar;?></span>
             </div> 
         <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> 
-
 </form>
+
+<form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
+    <div class="fondo_datos">REFLECTOR YSF: 
+                <span class="color_verde"><?php echo $reflector_ysf;?></span>
+            </div> 
+        <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"> 
+</form>
+
 
 <br>
 <form method="post" action="/dvs/index_dvswitch_buster.php">
