@@ -16,17 +16,20 @@
                 window.location.href = "editor_general.php";
             } else {
                 // Muestra un mensaje de error si la contraseña es incorrecta
-                //alert("Contraseña incorrecta. Inténtalo de nuevo.");
-                header("Location:../../index.php");
+                alert("Contraseña incorrecta. Inténtalo de nuevo.");
+                
             }
         }
     </script>
 </head>
 <body>
-    <!-- <h1>Bienvenido</h1> -->
+    <h1>Bienvenido</h1>
     <p>Haz clic en el botón para acceder a Editor_General:</p>
     
     <!-- Botón que solicita la contraseña -->
     <button onclick="solicitarPassword()">Acceder al Editor_General</button>
+ 
+    <button onclick="window.location.href='index.php'">Volver a index.php</button>
+
 </body>
 </html>
