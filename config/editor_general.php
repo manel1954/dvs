@@ -275,11 +275,12 @@ h6{
     <div class="col-md-4 config_especial"><br>     
         <h5>CONFIGURACIÓN GENERAL</h5>
 
-<form method="post" action="/dvs/config/cambia_sala_FCS.php">
-<input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
+<form method="post" action="/dvs/config/cambia_sala_FCS.php">   
     <div class="fondo_datos">Sala FCS:  
         <span class="color_verde"><?php echo $fcs;?></span>
-    </div>         
+    </div>  
+<input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
+        
 </form>
 
 
