@@ -13,7 +13,7 @@
             
             if (password === passwordCorrecta) {
                 // Redirige a la página prueba.php si la contraseña es correcta
-                window.location.href = "prueba.php";
+                window.location.href = "editor_general.php";
             } else {
                 // Muestra un mensaje de error si la contraseña es incorrecta
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
