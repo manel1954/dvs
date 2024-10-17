@@ -7,6 +7,10 @@
 
 
     <style>
+        
+        body{
+            background:#000;
+        }
         /* Estilo para el botón */
         button {
             background-color: red; /* Color de fondo rojo */
@@ -51,8 +55,8 @@
 
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <p>Haz clic en el botón para acceder a Editor_General:</p>
+<!--     <h1>Bienvenido</h1>
+    <p>Haz clic en el botón para acceder a Editor_General:</p> -->
     
     <!-- Botón que solicita la contraseña -->
     <button onclick="solicitarPassword()">Acceder al Editor_General</button>
