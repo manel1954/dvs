@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$reflector_ysf="ES-ADER";
+$reflector_ysf=($_POST["reflector_ysf"]);
 
 exec("sudo sed -i '42c Startup=$reflector_ysf' opt/YSFGateway/YSFGateway.ini");
 
