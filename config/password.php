@@ -20,7 +20,15 @@
             border-radius: 5px; /* Bordes redondeados */
             cursor: pointer; /* Cambia el cursor al pasar por el botón */
         }
-
+        /* Estilo para el botón rojo */
+        .btn-verde {
+            background-color: green; /* Color de fondo rojo */
+            color: white; /* Texto blanco */
+            padding: 10px 20px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar por el botón */
+        }
         /* Cambiar apariencia al pasar el mouse por encima */
         button:hover {
             background-color: darkred; /* Cambia a un tono más oscuro al pasar el mouse */
@@ -62,7 +70,7 @@
     <!-- Botón que solicita la contraseña -->
     <button class="button" onclick="solicitarPassword()">Acceder al Editor_General</button>
  
-    <button class="button2"onclick="window.location.href='../../index.php'">VOLVER</button>
+    <button class="btn"onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
 </html>
