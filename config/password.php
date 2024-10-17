@@ -12,15 +12,15 @@
             background:#000;
         }
 
-
-        /* Estilo para centrar los botones en la página */
+        /* Estilo para centrar los botones horizontalmente pero en la parte superior */
         body {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh; /* Altura de la pantalla completa */
+            align-items: flex-start; /* Alineado en la parte superior */
+            height: 100vh;
             margin: 0;
             flex-direction: column;
+            padding-top: 50px; /* Espaciado desde la parte superior */
         }
 
 
