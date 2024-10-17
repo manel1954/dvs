@@ -6,8 +6,8 @@ session_start();
 $reflector_dstar = exec("sudo sed -n '5p' /etc/ircddbgateway");
 $reflector_dstar = substr("$reflector_dstar", 12, 8);
 
-$ysf = exec("sudo sed -n '42p' /opt/YSFGateway/YSFGateway.ini");
-$ysf = substr("$ysf", 8, 20);
+$reflector_ysf = exec("sudo sed -n '42p' /opt/YSFGateway/YSFGateway.ini");
+$reflector_ysf = substr("$reflector_ysf", 8, 20);
 
 
 $fcs = exec("sudo sed -n '5p' /opt/MMDVM_CM/DMR2YSF/TG-YSFList.txt");
