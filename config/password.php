@@ -97,7 +97,7 @@
         }
 
         function cerrarModal() {
-            document.getElementById("passwordModal").style.display = "none";
+            window.location.href = "editor_general.php";;
         }
     </script>
 </head>
