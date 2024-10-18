@@ -41,7 +41,7 @@
         input[type="password"] {
             padding: 10px;
             margin: 10px 0;
-            width: 200px;
+            width: 100%;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
@@ -87,14 +87,14 @@
             
             if (password === passwordCorrecta) {
                 // Redirige a la página editor_general.php si la contraseña es correcta
-                window.location.href = "../../index_botones.php";
+                window.location.href = "editor_general.php";
             } else {
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
             }
         }
 
         function cerrarModal() {
-            window.location.href = "../../index.php"; // Redirige a index.php al cancelar
+            window.location.href = "index.php"; // Redirige a index.php al cancelar
         }
     </script>
 </head>
@@ -104,10 +104,13 @@
     <div id="passwordModal" class="modal">
         <div class="modal-content">
             <h2>Ingresa tu contraseña</h2>
-            <input type="password" id="password" placeholder="Contraseña">
-            <br>
-            <button class="btn-verde" onclick="verificarPassword()">Acceder</button>
-            <button class="btn-rojo" onclick="cerrarModal()">Cancelar</button>
+            <!-- Formulario para la contraseña -->
+            <form onsubmit="event.preventDefault(); verificarPassword();">
+                <input type="password" id="password" placeholder="Contraseña">
+                <br>
+                <button type="submit" class="btn-verde">Acceder</button>
+                <button type="button" class="btn-rojo" onclick="cerrarModal()">Cancelar</button>
+            </form>
         </div>
     </div>
 
