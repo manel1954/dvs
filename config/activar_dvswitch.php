@@ -24,7 +24,7 @@ exec("sudo systemctl restart p25gateway.service");
      <meta name="author" content="EA3EIZ">
      <link rel="shortcut icon" href="imagenes/favicon.png" type="image/x-icon" />
      <title>cambiando</title>
-     <meta http-equiv="refresh" content="2; url=../index_dvswitch_buster.php" />
+     <meta http-equiv="refresh" content="2; url=../../index_botones.php" />
 
     <!-- CSS Bootstrap-->
     <link href="css/bootstrap.css" rel="stylesheet">
