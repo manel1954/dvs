@@ -16,6 +16,36 @@
             text-align: center; /* Centrar texto y botones */
         }
 
+        /* Estilo para el cuadro modal */
+        .modal {
+            display: flex; /* Mostramos el modal inmediatamente al cargar la página */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilo para el contenido del modal */
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Estilo para el campo de la contraseña */
+        input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
         /* Estilo para el botón rojo */
         .btn-rojo {
             background-color: red; /* Color de fondo rojo */
@@ -46,42 +76,9 @@
             background-color: darkgreen; /* Cambia a un tono más oscuro al pasar el mouse */
         }
 
-        /* Estilo para el cuadro modal */
-        .modal {
-            display: none; /* Oculto por defecto */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Estilo para el contenido del modal */
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* Estilo para el campo de la contraseña */
-        input[type="password"] {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
     </style>
 
     <script>
-        function abrirModal() {
-            document.getElementById("passwordModal").style.display = "flex";
-        }
-
         function verificarPassword() {
             var password = document.getElementById("password").value;
             
@@ -97,17 +94,13 @@
         }
 
         function cerrarModal() {
-            window.location.href = "editor_general.php";;
+            window.location.href = "index.php"; // Redirige a index.php al cancelar
         }
     </script>
 </head>
 <body>
 
-    <!-- Botón para abrir el modal -->
-    <button class="btn-verde" onclick="abrirModal()">Acceder al Editor_General</button>
-    <button class="btn-rojo" onclick="window.location.href='../../index.php'">VOLVER</button>
-
-    <!-- Modal para solicitar la contraseña -->
+    <!-- Modal para solicitar la contraseña (se muestra al cargar la página) -->
     <div id="passwordModal" class="modal">
         <div class="modal-content">
             <h2>Ingresa tu contraseña</h2>
