@@ -41,7 +41,7 @@
         input[type="password"] {
             padding: 10px;
             margin: 10px 0;
-            width: 100px;
+            width: 200px;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
