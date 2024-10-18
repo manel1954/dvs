@@ -58,36 +58,8 @@
         }
 
 
-        /* Estilos básicos para centrar el cuadro de contraseña */
-        #passwordModal {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        #passwordModal input {
-            padding: 10px;
-            width: 100%;
-            margin-top: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        #passwordModal button {
-            margin-top: 10px;
-            padding: 10px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
 
+        
     </style>
 
 
@@ -118,12 +90,14 @@
 
 </head>
 <body>
-    <!-- Cuadro de diálogo para solicitar la contraseña -->
-    <div id="passwordModal">
-        <h2>Por favor, ingresa la contraseña:</h2>
-        <input type="password" id="passwordInput" placeholder="Contraseña">
-        <button onclick="verificarPassword()">Enviar</button>
-    </div>
+<!--     <h1>Bienvenido</h1>
+    <p>Haz clic en el botón para acceder a Editor_General:</p> -->
+    <br>
+    <br>
+    <!-- Botón que solicita la contraseña -->
+    <button class="btn-verde" onclick="solicitarPassword()">Acceder al Editor_General</button>
+ <br>
+    <button class="btn-rojo"onclick="window.location.href='../../index.php'">VOLVER</button>
 
 </body>
 </html>
