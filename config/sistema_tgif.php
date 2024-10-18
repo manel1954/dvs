@@ -248,25 +248,25 @@ h6{
 </form>
 
 <form method="post" action="cambia_puerto_tgif.php">
-
-        <input name="port_tgif" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
             <div class="fondo_datos">Puerto TGIF: 
                 <span class="color_verde"><?php echo $port;?></span>
-            </div>         
+            </div>
+        <input name="port_tgif" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
+         
 
 </form>
 
 <form method="post" action="cambia_password_tgif.php">
-
-        <input name="password_tgif" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
             <div class="fondo_datos">Password TGIF: 
                 <span class="color_verde"><?php echo $password;?></span>
             </div> 
+        <input name="password_tgif" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
+
 
 </form>
 <br>
 
-<form method="post" action="../index_dvswitch_buster.php">
+<form method="post" action="../../index_botones.php">
     <button class="btn btn-warning btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
 </form>
 <br>
