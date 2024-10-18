@@ -87,14 +87,14 @@
             
             if (password === passwordCorrecta) {
                 // Redirige a la página editor_general.php si la contraseña es correcta
-                window.location.href = "editor_general.php";
+                window.location.href = "editor_botones.php";
             } else {
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
             }
         }
 
         function cerrarModal() {
-            window.location.href = "index.php"; // Redirige a index.php al cancelar
+            window.location.href = "../../index.php"; // Redirige a index.php al cancelar
         }
     </script>
 </head>
