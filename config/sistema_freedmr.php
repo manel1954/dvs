@@ -184,7 +184,7 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_tgif{
-    height: 320px;
+    height: 370px;
     background:rgb(55, 27, 213);
     border-radius: 8px 8px 8px 8px;
     }
@@ -239,34 +239,34 @@ h6{
         <h5>CONFIGURACIÓN FREEDMR</h5>
   
 <form method="post" action="cambia_address_freedmr.php">
-
-        <input name="address_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
             <div class="fondo_datos">Address Freedmr: 
                 <span class="color_verde"><?php echo $address;?></span>
-            </div>         
+            </div>   
+        <input name="address_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
+      
 
 </form>
-
+<br>
 <form method="post" action="cambia_puerto_freedmr.php">
-
-        <input name="port_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
             <div class="fondo_datos">Puerto Freedmr: 
                 <span class="color_verde"><?php echo $port;?></span>
-            </div>         
+            </div>  
+        <input name="port_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
+       
 
 </form>
-
+<br>
 <form method="post" action="cambia_password_freedmr.php">
-
-        <input name="password_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
             <div class="fondo_datos">Password Freedmr: 
                 <span class="color_verde"><?php echo $password;?></span>
             </div> 
+        <input name="password_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
+
 
 </form>
 <br>
 
-<form method="post" action="../index_dvswitch_buster.php">
+<form method="post" action="../../index_botones.php">
     <button class="btn btn-warning btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
 </form>
 <br>
