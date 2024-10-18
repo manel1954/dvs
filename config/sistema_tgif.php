@@ -239,14 +239,14 @@ h6{
         <h5>CONFIGURACIÓN TGIF</h5>
   
 <form method="post" action="cambia_address_tgif.php">
-
-        <input name="address_tgif" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
             <div class="fondo_datos">Address TGIF: 
                 <span class="color_verde"><?php echo $address;?></span>
-            </div>         
+            </div>
+        <input name="address_tgif" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
+         
 
 </form>
-
+<br>
 <form method="post" action="cambia_puerto_tgif.php">
             <div class="fondo_datos">Puerto TGIF: 
                 <span class="color_verde"><?php echo $port;?></span>
@@ -255,7 +255,7 @@ h6{
          
 
 </form>
-
+<br>
 <form method="post" action="cambia_password_tgif.php">
             <div class="fondo_datos">Password TGIF: 
                 <span class="color_verde"><?php echo $password;?></span>
