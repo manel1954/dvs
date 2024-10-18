@@ -45,6 +45,9 @@ $password = substr("$password", 9, 20);
     body{
 background-image: url(img/fondo_02.png);
     }
+    .texto {
+      display: none;
+    }
 .sistema{
     height: 50px;
     color:#FFFFFF;
@@ -184,7 +187,7 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_especial{
-    height: 350px;
+    height: 480px;
     background:#000000;
     border-radius: 8px 8px 8px 8px;
     }
@@ -221,7 +224,61 @@ h6{
     height: 25px;
     text-align: center;
     font-size: 16px;
+    border-radius: 5px 5px 5px 5px;
+    border: 1px solid #d82100;
+
 }
+
+.guardar {
+    margin-bottom: 7px;
+    width: 100%;
+    height: 23px;
+    text-align:center;
+    padding: 0px 0px 0px 0px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background:#156dd8;
+    color:#fff;
+}
+
+.ocultar {
+
+    margin-left: 8px;
+    margin-bottom: 7px;
+    width: 48%;
+    height: 18px;
+    text-align:center;
+    padding: 0px 0px 0px 0px;
+    background-color: #4C4C4C;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background:#6ea171;
+}
+
+
+.mostrar {
+   
+    margin-bottom: 7px;
+    width: 48%;
+    height: 18px;
+    text-align:center;
+    padding: 0px 0px 0px 0px;
+    background-color: #4C4C4C;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background:#6ea171;
+}
+
+
+
+
+
+
+
+
 </style>
 </head>
 <body>
@@ -239,34 +296,50 @@ h6{
         <h5>CONFIGURACIÓN BRANDMEISTER</h5>
   
 <form method="post" action="cambia_address_brandmeister.php">
-           <div class="fondo_datos">Address BM: 
+
+            <div class="fondo_datos">Address BM: 
                 <span class="color_verde"><?php echo $address;?></span>
-            </div>
-        <input name="address_bm" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
-          
-
-</form>
-
-<form method="post" action="cambia_puerto_brandmeister.php">
-            <div class="fondo_datos">Puerto BM: 
-                <span class="color_verde"><?php echo $port;?></span>
-            </div>
-        <input name="port_bm" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
-         
-
-</form>
-
-<form method="post" action="cambia_password_brandmeister.php">
-            <div class="fondo_datos">Password BM: 
-                <span class="color_verde"><?php echo $password;?></span>
-            </div> 
-        <input name="password_bm" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
-
+            </div>         
+        <input name="address_bm" class="fuente_boton3 form-control" placeholder="Introduce Address">
+        <input class="guardar" type="submit" value="Guardar">
 
 </form>
 <br>
+<form method="post" action="cambia_puerto_brandmeister.php">
 
-<form method="post" action="../../index_botones.php">
+       
+            <div class="fondo_datos">Puerto BM: 
+                <span class="color_verde"><?php echo $port;?></span>
+            </div>         
+ <input name="port_bm" class="fuente_boton3 form-control" placeholder="Introduce Port">
+ <input class="guardar" type="submit" value="Guardar">
+</form>
+<br>
+
+            <button class="mostrar" onclick="mostrarDiv()">Mostrar Password</button>
+            <button class="ocultar"onclick="ocultarDiv()">Ocultar Password</button>
+
+<form method="post" action="cambia_password_brandmeister.php"> 
+
+            <div id="divTexto" class="fondo_datos texto">Password BM muestra: 
+                <span class="color_verde"><?php echo $password;?></span>
+            </div>
+
+            <div class="fondo_datos">Password BM: 
+                <span class="color_verde"><?php $maskedPassword = str_repeat("*", strlen($password));echo $maskedPassword;?></span>
+            </div> 
+            
+
+
+
+            
+            <input name="password_bm" type="password" class="fuente_boton3 form-control" placeholder="Introduce Password">
+            <input class="guardar" type="submit" value="Guardar">
+</form>
+
+<br>
+
+<form method="post" action="../../index.php">
     <button class="btn btn-warning btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
 </form>
 <br>
@@ -298,5 +371,23 @@ with (document.getElementById("parpadeo").style)
 visibility = (visibility == "visible") ? "hidden" : "visible";
 }
 </script>
+
+
+
+
+    <script>
+    function mostrarDiv() {
+      document.getElementById('divTexto').style.display = 'block';
+    }
+
+    function ocultarDiv() {
+      document.getElementById('divTexto').style.display = 'none';
+    }
+  </script>
+
+
+
+
+
 </body>
 </html>
