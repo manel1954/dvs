@@ -87,7 +87,7 @@
             
             if (password === passwordCorrecta) {
                 // Redirige a la página editor_general.php si la contraseña es correcta
-                window.location.href = "editor_general.php";
+                window.location.href = "index_botones.php";
             } else {
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
             }
