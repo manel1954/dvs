@@ -249,14 +249,13 @@ h6{
 
 <form method="post" action="cambia_puerto_especial.php">
             <div class="fondo_datos">Puerto Especial: 
-                <span class="color_verde"><?php echo $port;?></span>        
-                <input name="port_especial" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
-
+                <span class="color_verde"><?php echo $port;?></span>
             </div> 
+        <input name="port_especial" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
         
 
 </form>
-
+<br>
 <form method="post" action="cambia_password_especial.php">
             <div class="fondo_datos">Password especial: 
                 <span class="color_verde"><?php echo $password;?></span>
