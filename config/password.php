@@ -118,14 +118,12 @@
 
 </head>
 <body>
-<!--     <h1>Bienvenido</h1>
-    <p>Haz clic en el botón para acceder a Editor_General:</p> -->
-    <br>
-    <br>
-    <!-- Botón que solicita la contraseña -->
-    <button class="btn-verde" onclick="solicitarPassword()">Acceder al Editor_General</button>
- <br>
-    <button class="btn-rojo"onclick="window.location.href='../../index.php'">VOLVER</button>
+    <!-- Cuadro de diálogo para solicitar la contraseña -->
+    <div id="passwordModal">
+        <h2>Por favor, ingresa la contraseña:</h2>
+        <input type="password" id="passwordInput" placeholder="Contraseña">
+        <button onclick="verificarPassword()">Enviar</button>
+    </div>
 
 </body>
 </html>
