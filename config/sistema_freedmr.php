@@ -239,7 +239,7 @@ h6{
         <h5>CONFIGURACIÓN FREEDMR</h5>
   
 <form method="post" action="cambia_address_freedmr.php">
-            <div class="fondo_datos">Address Freedmr: 
+            <div class="fondo_datos">Address: 
                 <span class="color_verde"><?php echo $address;?></span>
             </div>   
         <input name="address_freedmr" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
