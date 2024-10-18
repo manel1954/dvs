@@ -239,29 +239,29 @@ h6{
         <h5>CONFIGURACIÓN ESPECIAL</h5>
      <h6>Brandmeister otro País, xlx, HBlink, etc..</h6>
 <form method="post" action="cambia_address_especial.php">
-
-        <input name="address_especial" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
             <div class="fondo_datos">Address especial: 
                 <span class="color_verde"><?php echo $address;?></span>
-            </div>         
+            </div>   
+        <input name="address_especial" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
+      
 
 </form>
 
 <form method="post" action="cambia_puerto_especial.php">
-
-        <input name="port_especial" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
             <div class="fondo_datos">Puerto Especial: 
                 <span class="color_verde"><?php echo $port;?></span>
-            </div>         
+            </div> 
+        <input name="port_especial" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
+        
 
 </form>
 
 <form method="post" action="cambia_password_especial.php">
-
-        <input name="password_especial" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
             <div class="fondo_datos">Password especial: 
                 <span class="color_verde"><?php echo $password;?></span>
             </div> 
+        <input name="password_especial" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
+
 
 </form>
 <br>
