@@ -289,7 +289,7 @@ body{
     <div class="col-md-4">
         <div class="caja_login4 ">
             <div class="panel-body">
-            <label class="texto_blanco">CONFIGURAR REFLECTOR MANUALMAENTE</label>                 
+            <label class="texto_blanco">CONFIGURAR REFLECTOR MANUALMENTE</label>                 
     <form method="post" action="cambia_reflector_dmrplus_manualmente.php">
             <input name="ipsc2" class="form-control fuente_boton1" placeholder="Introduce Reflrector,  Ej. 212.237.3.141">
             <div class="fondo_datos"> 
