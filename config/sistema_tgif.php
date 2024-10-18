@@ -184,7 +184,7 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_tgif{
-    height: 320px;
+    height: 370px;
     background:rgb(55, 27, 213);
     border-radius: 8px 8px 8px 8px;
     }
