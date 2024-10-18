@@ -239,29 +239,29 @@ h6{
         <h5>CONFIGURACIÓN BRANDMEISTER</h5>
   
 <form method="post" action="cambia_address_brandmeister.php">
-
-        <input name="address_bm" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
-            <div class="fondo_datos">Address BM: 
+           <div class="fondo_datos">Address BM: 
                 <span class="color_verde"><?php echo $address;?></span>
-            </div>         
+            </div>
+        <input name="address_bm" class="fuente_boton3 form-control" placeholder="Introduce Address + Enter">
+          
 
 </form>
 
 <form method="post" action="cambia_puerto_brandmeister.php">
-
-        <input name="port_bm" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
             <div class="fondo_datos">Puerto BM: 
                 <span class="color_verde"><?php echo $port;?></span>
-            </div>         
+            </div>
+        <input name="port_bm" class="fuente_boton3 form-control" placeholder="Introduce Port + Enter">
+         
 
 </form>
 
 <form method="post" action="cambia_password_brandmeister.php">
-
-        <input name="password_bm" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
             <div class="fondo_datos">Password BM: 
                 <span class="color_verde"><?php echo $password;?></span>
             </div> 
+        <input name="password_bm" class="fuente_boton3 form-control" placeholder="Introduce Password + Enter"> 
+
 
 </form>
 <br>
