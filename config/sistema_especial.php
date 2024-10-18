@@ -246,7 +246,7 @@ h6{
       
 
 </form>
-
+<br>
 <form method="post" action="cambia_puerto_especial.php">
             <div class="fondo_datos">Puerto Especial: 
                 <span class="color_verde"><?php echo $port;?></span>
