@@ -282,37 +282,36 @@ h6{
 
 <form method="post" action="/dvs/config/cambia_puerto.php">    
     <div class="fondo_datos">Puerto USRP: 
-        <span class="color_verde"><?php echo $puerto;?> <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter"></span>       
+        <span class="color_verde"><?php echo $puerto;?> 
+        <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter"></span>       
     </div> 
     <br>
 </form>
 
-
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
             <div class="fondo_datos">Indicativoxx: 
-                <span class="color_verde"><?php echo $callsign;?></span>
+                <span class="color_verde"><?php echo $callsign;?>
+                <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter"></span>
             </div>
-        <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter">
-         
-
+    <br>
 </form>
-<br>
+
 <form method="post" action="/dvs/config/cambia_configuracion_id.php">            
     <div class="fondo_datos">Id: 
                 <span class="color_verde"><?php echo $id;?></span>
-            </div> 
-        <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
+          <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
+         </div> 
+        <br> 
 
 </form>
-<br>
 <form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
     <div class="fondo_datos">Frecuencia RXF-TXF: 
-                <span class="color_verde"><?php echo $frecuencia;?></span>
+                <span class="color_verde"><?php echo $frecuencia;?>
+                <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"></span>
             </div>
-        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"> 
+         <br>
  
 </form>
-<br>
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
     <div class="fondo_datos">Latitude: 
                 <span class="color_verde"><?php echo $latitude;?></span>
