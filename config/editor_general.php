@@ -343,7 +343,7 @@ h6{
         <?php echo $url;?></span>
         <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
-<br>
+
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
