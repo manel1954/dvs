@@ -348,11 +348,11 @@ h6{
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
         <span>REFLECTOR DSTAR: </span>
-                <span class="color_verde">
-                <?php echo $reflector_dstar;?></span>
-                <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej: DCS018 Y  + Enter"> </span>
-            </div> 
-            <br>
+        <span class="color_verde">
+        <?php echo $reflector_dstar;?></span>
+        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej: DCS018 Y  + Enter" style="margin-left: 20px; width: 300px;"> <!-- Ajusta el ancho según sea necesario --> 
+    </div> 
+<br>
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
