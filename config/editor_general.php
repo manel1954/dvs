@@ -278,7 +278,7 @@ h6{
 
 <form method="post" action="/dvs/config/cambia_puerto.php">    
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>PUERTO USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
+        <span> PUERTO USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
         <input name="puerto" class="fuente_boton3 form-control" placeholder="Puerto USRP + Enter" style="margin-left: 2px; width: 200px;"style="margin-left: 2px; width: 200px;">       
         </div> 
 </form>
