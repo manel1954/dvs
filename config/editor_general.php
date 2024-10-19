@@ -281,25 +281,23 @@ h6{
 
 
 <form method="post" action="/dvs/config/cambia_puerto.php">    
-    <div class="fondo_datos">Puerto USRP: 
-        <span class="color_verde"><?php echo $puerto;?> 
-        <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter"></span>       
-    </div> 
-    <br>
+<div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Puerto USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
+        <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter" style="margin-left: 2px; width: 200px;"style="margin-left: 2px; width: 200px;">       
+        </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
-            <div class="fondo_datos">Indicativoxx: 
-                <span class="color_verde"><?php echo $callsign;?>
-                <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter"></span>
-            </div>
-    <br>
+<div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Indicativoxx: </span><span class="color_verde"><?php echo $callsign;?></span>
+        <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter" style="margin-left: 2px; width: 200px;">
+        </div>
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_id.php">            
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Id: </span><span class="color_verde"><?php echo $id;?></span>
-        <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter" style="margin-left: 2px; width: 200px;"> 
+        <span>ID: </span><span class="color_verde"><?php echo $id;?></span>
+        <input name="id" class="fuente_boton3 form-control" placeholder="Id de 9 Dígitos + Enter" style="margin-left: 2px; width: 200px;"> 
         </div> 
 </form>
 
