@@ -284,8 +284,7 @@ h6{
     <div class="fondo_datos">Puerto USRP: 
         <span class="color_verde"><?php echo $puerto;?> <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter"></span>       
     </div> 
-
-
+    <br>
 </form>
 
 <br>
