@@ -346,9 +346,11 @@ h6{
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
-    <div class="fondo_datos">REFLECTOR DSTAR: 
-                <span class="color_verde"><?php echo $reflector_dstar;?>
-                <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> </span>
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>REFLECTOR DSTAR: </span>
+                <span class="color_verde">
+                <?php echo $reflector_dstar;?></span>
+                <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej: DCS018 Y  + Enter"> </span>
             </div> 
             <br>
 </form>
@@ -357,11 +359,9 @@ h6{
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
         <span>REFLECTOR YSF: </span>
         <span class="color_verde">
-            <?php echo $reflector_ysf;?>
-        </span>
-        <input name="reflector_ysf" class="fuente_boton3 form-control" 
-               placeholder="ej. EA-Distrito-4 + Enter" 
-               style="margin-left: 20px; width: 300px;"> <!-- Ajusta el ancho según sea necesario -->
+        <?php echo $reflector_ysf;?></span>        
+        <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="ej. EA-Distrito-4 + Enter" 
+        style="margin-left: 20px; width: 300px;"> <!-- Ajusta el ancho según sea necesario -->
     </div>
 </form>
 
