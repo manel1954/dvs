@@ -320,20 +320,17 @@ h6{
             <br>
 
 </form>
-<form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
-    <div class="fondo_datos">Longitude: 
-                <span class="color_verde"><?php echo $longitude;?>
-                <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"></span>
-            </div> 
-            <br>
 
+<form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
+    <div class="fondo_datos"style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Longitude: <span class="color_verde"><?php echo $longitude;?></span>
+        <input name="longitude" class="fuente_boton3 form-control" placeholder="Longitude  + Enter" style="margin-left: 2px; width: 200px;">
+    </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Ciudad: </span>
-        <span class="color_verde">
-        <?php echo $location;?></span>
+        <span>Ciudad: </span><span class="color_verde"><?php echo $location;?></span>
         <input name="location" class="fuente_boton3 form-control" placeholder="Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
 </form>
@@ -342,7 +339,7 @@ h6{
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
         <span>URL: </span><span class="color_verde"><?php echo $url;?></span>
         <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter" style="margin-left: 2px; width: 200px;">
-        </div> 
+    </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
