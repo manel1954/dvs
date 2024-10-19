@@ -221,8 +221,8 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_especial{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 4500px;
     background:#d9540c;
     border-radius: 8px 8px 8px 8px;
     }
