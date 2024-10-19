@@ -276,21 +276,17 @@ h6{
     <div class="col-md-4 config_especial"><br>     
         <h5>CONFIGURACIÓN GENERAL</h5>
 
-
-
-
-
 <form method="post" action="/dvs/config/cambia_puerto.php">    
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Puerto USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
-        <input name="puerto" class="fuente_boton3 form-control" placeholder="Introduce Puerto USRP + Enter" style="margin-left: 2px; width: 200px;"style="margin-left: 2px; width: 200px;">       
+        <span>PUERTO USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
+        <input name="puerto" class="fuente_boton3 form-control" placeholder="Puerto USRP + Enter" style="margin-left: 2px; width: 200px;"style="margin-left: 2px; width: 200px;">       
         </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Indicativoxx: </span><span class="color_verde"><?php echo $callsign;?></span>
-        <input name="indicativo" class="fuente_boton3 form-control" placeholder="Introduce Indicativo + Enter" style="margin-left: 2px; width: 200px;">
+        <span>INDICATIVO: </span><span class="color_verde"><?php echo $callsign;?></span>
+        <input name="indicativo" class="fuente_boton3 form-control" placeholder="Indicativo + Enter" style="margin-left: 2px; width: 200px;">
         </div>
 </form>
 
