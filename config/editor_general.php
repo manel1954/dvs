@@ -247,7 +247,7 @@ h6{
     margin-bottom: 7px;
     width: 100%;
     height: 25px;
-    text-align:center;
+    text-align:left;
     padding: 0px 0px 0px 0px;
     background-color: #4C4C4C;
     border-radius: 5px 5px 5px 5px;
