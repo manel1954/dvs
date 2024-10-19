@@ -287,7 +287,7 @@ h6{
         
 </form>
 
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
             <div class="fondo_datos">Indicativoxx: 
                 <span class="color_verde"><?php echo $callsign;?></span>
@@ -296,7 +296,7 @@ h6{
          
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_id.php">            
     <div class="fondo_datos">Id: 
                 <span class="color_verde"><?php echo $id;?></span>
@@ -304,7 +304,7 @@ h6{
         <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
     <div class="fondo_datos">Frecuencia RXF-TXF: 
                 <span class="color_verde"><?php echo $frecuencia;?></span>
@@ -312,7 +312,7 @@ h6{
         <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"> 
  
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
     <div class="fondo_datos">Latitude: 
                 <span class="color_verde"><?php echo $latitude;?></span>
@@ -320,7 +320,7 @@ h6{
         <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> 
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
     <div class="fondo_datos">Longitude: 
                 <span class="color_verde"><?php echo $longitude;?></span>
@@ -328,7 +328,7 @@ h6{
         <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"> 
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
     <div class="fondo_datos">Ciudad: 
                 <span class="color_verde"><?php echo $location;?></span>
@@ -336,7 +336,7 @@ h6{
         <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"> 
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_configuracion_url.php">            
     <div class="fondo_datos">URL: 
                 <span class="color_verde"><?php echo $url;?></span>
@@ -344,28 +344,28 @@ h6{
         <input name="url" class="fuente_boton3 form-control" placeholder="Introduce Web preferida  + Enter"> 
 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
     <div class="fondo_datos">REFLECTOR DSTAR: 
                 <span class="color_verde"><?php echo $reflector_dstar;?></span>
             </div> 
         <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> 
 </form>
-
+<br>
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
     <div class="fondo_datos">REFLECTOR YSF: 
                 <span class="color_verde"><?php echo $reflector_ysf;?></span>
             </div> 
         <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"> 
 </form>
-
+<!-- <br>
 <form method="post" action="/dvs/config/cambia_sala_FCS.php">   
     <div class="fondo_datos">Sala FCS:  
         <span class="color_verde"><?php echo $fcs;?></span>
     </div>  
 <input name="fcs" class="fuente_boton3 form-control" placeholder="Introduce Sala FCS ej:FCS0065 + Enter">
         
-</form>
+</form> -->
 <br>
 <form method="post" action="../../index.php">
     <button class="btn btn-success btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
