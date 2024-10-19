@@ -313,12 +313,10 @@ h6{
  
 </form>
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
-    <div class="fondo_datos">Latitude: 
-                <span class="color_verde"><?php echo $latitude;?>
-                <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> </span>
-            </div> 
-            <br>
-
+<div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Latitude: </span><span class="color_verde"><?php echo $latitude;?></span>
+        <input name="latitude" class="fuente_boton3 form-control" placeholder="Latitude  + Enter" style="margin-left: 2px; width: 200px;">
+        </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
