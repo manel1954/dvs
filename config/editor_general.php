@@ -360,7 +360,7 @@ h6{
             <?php echo $reflector_ysf;?>
         </span>
         <input name="reflector_ysf" class="fuente_boton3 form-control" 
-               placeholder="Introduce Reflector YSF ej. EA-Distrito-4 + Enter" 
+               placeholder="ej. EA-Distrito-4 + Enter" 
                style="margin-left: 20px; width: 300px;"> <!-- Ajusta el ancho según sea necesario -->
     </div>
 </form>
