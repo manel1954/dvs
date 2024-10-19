@@ -314,48 +314,51 @@ h6{
 </form>
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
     <div class="fondo_datos">Latitude: 
-                <span class="color_verde"><?php echo $latitude;?></span>
+                <span class="color_verde"><?php echo $latitude;?>
+                <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> </span>
             </div> 
-        <input name="latitude" class="fuente_boton3 form-control" placeholder="Introduce Latitude  + Enter"> 
+            <br>
 
 </form>
-<br>
 <form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
     <div class="fondo_datos">Longitude: 
-                <span class="color_verde"><?php echo $longitude;?></span>
+                <span class="color_verde"><?php echo $longitude;?>
+                <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"></span>
             </div> 
-        <input name="longitude" class="fuente_boton3 form-control" placeholder="Introduce Longitude  + Enter"> 
+            <br>
 
 </form>
-<br>
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
     <div class="fondo_datos">Ciudad: 
-                <span class="color_verde"><?php echo $location;?></span>
+                <span class="color_verde"><?php echo $location;?>
+                <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"></span>
             </div> 
-        <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"> 
+            <br>
 
 </form>
-<br>
 <form method="post" action="/dvs/config/cambia_configuracion_url.php">            
     <div class="fondo_datos">URL: 
-                <span class="color_verde"><?php echo $url;?></span>
+                <span class="color_verde"><?php echo $url;?>
+                <input name="url" class="fuente_boton3 form-control" placeholder="Introduce Web preferida  + Enter"></span>
             </div> 
-        <input name="url" class="fuente_boton3 form-control" placeholder="Introduce Web preferida  + Enter"> 
+            <br>
 
 </form>
-<br>
+
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
     <div class="fondo_datos">REFLECTOR DSTAR: 
-                <span class="color_verde"><?php echo $reflector_dstar;?></span>
+                <span class="color_verde"><?php echo $reflector_dstar;?>
+                <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> </span>
             </div> 
-        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="Introduce Reflector Dstar ej: DCS018 Y  + Enter"> 
+            <br>
 </form>
-<br>
+
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
     <div class="fondo_datos">REFLECTOR YSF: 
-                <span class="color_verde"><?php echo $reflector_ysf;?></span>
+                <span class="color_verde"><?php echo $reflector_ysf;?>
+                <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"></span>
             </div> 
-        <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"> 
+            <br> 
 </form>
 <!-- <br>
 <form method="post" action="/dvs/config/cambia_sala_FCS.php">   
