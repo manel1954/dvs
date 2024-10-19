@@ -221,7 +221,7 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_especial{
-    width: 600px;
+    width: 500px;
     height: 500px;
     background:#d9540c;
     border-radius: 8px 8px 8px 8px;
@@ -330,7 +330,7 @@ h6{
 
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Ciudad: </span><span class="color_verde"><?php echo $location;?></span>
+        <span>Ciudad: </span class="color_verde"><?php echo $location;?></span>
         <input name="location" class="fuente_boton3 form-control" placeholder="Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
 </form>
