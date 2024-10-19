@@ -334,16 +334,13 @@ h6{
         <span>Ciudad: </span>
         <span class="color_verde">
         <?php echo $location;?></span>
-        <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
+        <input name="location" class="fuente_boton3 form-control" placeholder="Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
-    <br>
-
 </form>
+
 <form method="post" action="/dvs/config/cambia_configuracion_url.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>URL: </span>
-        <span class="color_verde">
-        <?php echo $url;?></span>
+        <span>URL: </span><span class="color_verde"><?php echo $url;?></span>
         <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
 </form>
