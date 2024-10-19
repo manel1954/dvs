@@ -221,7 +221,7 @@ background-image: url(img/fondo_02.png);
     border-radius: 8px 8px 8px 8px;
     }
 .config_especial{
-    width: 510px;
+    width: 500px;
     height: 500px;
     background:#d9540c;
     border-radius: 8px 8px 8px 8px;
@@ -297,18 +297,16 @@ h6{
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_id.php">            
-    <div class="fondo_datos">Id: 
-                <span class="color_verde"><?php echo $id;?></span>
-          <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter"> 
-         </div> 
-        <br> 
-
+<div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Id: </span><span class="color_verde"><?php echo $id;?></span>
+        <input name="id" class="fuente_boton3 form-control" placeholder="Introduce Id de 9 Dígitos + Enter" style="margin-left: 2px; width: 200px;"> 
+        </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">   
         <span>FRECUENCIA: </span><span class="color_verde"><?php echo $frecuencia;?></span>
-        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="9 dígitos sin puntos + Enter" style="margin-left: 2px; width: 200px;">
+        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="9 dígitos + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
 </form>
 
