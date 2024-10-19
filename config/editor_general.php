@@ -307,28 +307,28 @@ h6{
 
 <form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">   
-        <span>Frecuencia RXF-TXF: </span><span class="color_verde"><?php echo $frecuencia;?></span>
+        <span>FRECUENCIA: </span><span class="color_verde"><?php echo $frecuencia;?></span>
         <input name="frecuencia" class="fuente_boton3 form-control" placeholder="9 dígitos sin puntos + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Latitude: </span><span class="color_verde"><?php echo $latitude;?></span>
-        <input name="latitude" class="fuente_boton3 form-control" placeholder="LATITUDE  + Enter" style="margin-left: 2px; width: 200px;">
+        <span>LATITUDE: </span><span class="color_verde"><?php echo $latitude;?></span>
+        <input name="latitude" class="fuente_boton3 form-control" placeholder="Latitude  + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Longitude: </span><span class="color_verde"><?php echo $longitude;?></span>
-        <input name="longitude" class="fuente_boton3 form-control" placeholder="LONGITUDE  + Enter" style="margin-left: 2px; width: 200px;">
+        <span>LONGITUDE: </span><span class="color_verde"><?php echo $longitude;?></span>
+        <input name="longitude" class="fuente_boton3 form-control" placeholder="Longitude  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>Ciudad: </span><span class="color_verde"><?php echo $location;?></span>
+        <span>CIUDAD: </span><span class="color_verde"><?php echo $location;?></span>
         <input name="location" class="fuente_boton3 form-control" placeholder="Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
 </form>
