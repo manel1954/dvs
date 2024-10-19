@@ -354,16 +354,17 @@ h6{
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
-    <div class="fondo_datos" style="overflow: hidden;">
-        REFLECTOR YSF: 
-        <span class="color_verde" style="float: left;">
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>REFLECTOR YSF: </span>
+        <span class="color_verde">
             <?php echo $reflector_ysf;?>
         </span>
         <input name="reflector_ysf" class="fuente_boton3 form-control" 
                placeholder="Introduce Reflector YSF ej. EA-Distrito-4 + Enter" 
-               style="float: left; margin-left: 10px;">
+               style="margin-left: 20px; width: 300px;"> <!-- Ajusta el ancho según sea necesario -->
     </div>
 </form>
+
 
 
 
