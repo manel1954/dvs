@@ -354,12 +354,17 @@ h6{
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
-    <div class="fondo_datos">REFLECTOR YSF: 
-                <span class="color_verde"><?php echo $reflector_ysf;?>
-                <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="Introduce Reflector YSF ej. EA-Distrito-4  + Enter"></span>
-            </div> 
-            <br> 
+    <div class="fondo_datos" style="display: inline-block;">
+        REFLECTOR YSF: 
+        <span class="color_verde" style="display: inline-block;">
+            <?php echo $reflector_ysf;?>
+            <input name="reflector_ysf" class="fuente_boton3 form-control" 
+                   placeholder="Introduce Reflector YSF ej. EA-Distrito-4 + Enter" 
+                   style="display: inline-block;">
+        </span>
+    </div>
 </form>
+
 <!-- <br>
 <form method="post" action="/dvs/config/cambia_sala_FCS.php">   
     <div class="fondo_datos">Sala FCS:  
