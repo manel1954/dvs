@@ -328,12 +328,15 @@ h6{
             <br>
 
 </form>
+
 <form method="post" action="/dvs/config/cambia_configuracion_location.php">            
-    <div class="fondo_datos">Ciudad: 
-                <span class="color_verde"><?php echo $location;?>
-                <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter"></span>
-            </div> 
-            <br>
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>Ciudad: </span>
+        <span class="color_verde">
+        <?php echo $location;?></span>
+        <input name="location" class="fuente_boton3 form-control" placeholder="Introduce Ciudad  + Enter" style="margin-left: 2px; width: 200px;">
+    </div> 
+    <br>
 
 </form>
 <form method="post" action="/dvs/config/cambia_configuracion_url.php">            
@@ -343,7 +346,6 @@ h6{
         <?php echo $url;?></span>
         <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
-
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
@@ -353,7 +355,6 @@ h6{
         <?php echo $reflector_dstar;?></span>
         <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej. DCS018 D + Enter" style="margin-left: 2px; width: 200px;"> 
     </div> 
-<br>
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
