@@ -287,7 +287,7 @@ h6{
     <br>
 </form>
 
-<br>
+
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
             <div class="fondo_datos">Indicativoxx: 
                 <span class="color_verde"><?php echo $callsign;?></span>
