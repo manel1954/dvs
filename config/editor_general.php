@@ -337,12 +337,13 @@ h6{
 
 </form>
 <form method="post" action="/dvs/config/cambia_configuracion_url.php">            
-    <div class="fondo_datos">URL: 
-                <span class="color_verde"><?php echo $url;?>
-                <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter"></span>
-            </div> 
-            <br>
-
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>URL: </span>
+        <span class="color_verde">
+        <?php echo $url;?></span>
+        <input name="url" class="fuente_boton3 form-control" placeholder="Web preferida + Enter" style="margin-left: 2px; width: 200px;">
+        </div> 
+<br>
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_dstar.php">            
@@ -350,7 +351,7 @@ h6{
         <span>REFLECTOR DSTAR: </span>
         <span class="color_verde">
         <?php echo $reflector_dstar;?></span>
-        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej. DCS018 Y + Enter" style="margin-left: 2px; width: 200px;"> <!-- Ajusta el ancho según sea necesario --> 
+        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej. DCS018 D + Enter" style="margin-left: 2px; width: 200px;"> 
     </div> 
 <br>
 </form>
@@ -361,7 +362,7 @@ h6{
         <span class="color_verde">
         <?php echo $reflector_ysf;?></span>        
         <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="ej. EA-Distrito-4 + Enter" 
-        style="margin-left: 2px; width: 200px;"> <!-- Ajusta el ancho según sea necesario -->
+        style="margin-left: 2px; width: 200px;">
     </div>
 </form>
 
