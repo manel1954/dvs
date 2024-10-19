@@ -350,7 +350,7 @@ h6{
         <span>REFLECTOR DSTAR: </span>
         <span class="color_verde">
         <?php echo $reflector_dstar;?></span>
-        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej: DCS018 Y  + Enter" style="margin-left: 10px; width: 300px;"> <!-- Ajusta el ancho según sea necesario --> 
+        <input name="reflector_dstar" class="fuente_boton3 form-control" placeholder="ej: DCS018 Y  + Enter" style="margin-left: 10px; width: 200px;"> <!-- Ajusta el ancho según sea necesario --> 
     </div> 
 <br>
 </form>
@@ -361,7 +361,7 @@ h6{
         <span class="color_verde">
         <?php echo $reflector_ysf;?></span>        
         <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="ej. EA-Distrito-4 + Enter" 
-        style="margin-left: 2px; width: 300px;"> <!-- Ajusta el ancho según sea necesario -->
+        style="margin-left: 2px; width: 200px;"> <!-- Ajusta el ancho según sea necesario -->
     </div>
 </form>
 
