@@ -304,25 +304,25 @@ h6{
         <br> 
 
 </form>
+
 <form method="post" action="/dvs/config/cambia_configuracion_frecuencia.php">            
-    <div class="fondo_datos">Frecuencia RXF-TXF: 
-                <span class="color_verde"><?php echo $frecuencia;?>
-                <input name="frecuencia" class="fuente_boton3 form-control" placeholder="Introduce Frecuencia 9 dígitos sin puntos + Enter"></span>
-            </div>
-         <br>
- 
+<div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">   
+        <span>Frecuencia RXF-TXF: </span><span class="color_verde"><?php echo $frecuencia;?></span>
+        <input name="frecuencia" class="fuente_boton3 form-control" placeholder="9 dígitos sin puntos + Enter" style="margin-left: 2px; width: 200px;">
+        </div> 
 </form>
+
 <form method="post" action="/dvs/config/cambia_configuracion_latitud.php">            
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
         <span>Latitude: </span><span class="color_verde"><?php echo $latitude;?></span>
-        <input name="latitude" class="fuente_boton3 form-control" placeholder="Latitude  + Enter" style="margin-left: 2px; width: 200px;">
+        <input name="latitude" class="fuente_boton3 form-control" placeholder="LATITUDE  + Enter" style="margin-left: 2px; width: 200px;">
         </div> 
 </form>
 
 <form method="post" action="/dvs/config/cambia_configuracion_longitud.php">            
     <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
         <span>Longitude: </span><span class="color_verde"><?php echo $longitude;?></span>
-        <input name="longitude" class="fuente_boton3 form-control" placeholder="Longitude  + Enter" style="margin-left: 2px; width: 200px;">
+        <input name="longitude" class="fuente_boton3 form-control" placeholder="LONGITUDE  + Enter" style="margin-left: 2px; width: 200px;">
     </div> 
 </form>
 
