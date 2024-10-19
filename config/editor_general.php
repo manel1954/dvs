@@ -342,7 +342,7 @@ h6{
 </form>
 
 <form method="post" action="/dvs/config/cambia_reflector_ysf.php">            
-    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: left;">
         <span>&nbsp;&nbsp;REFLECTOR YSF: </span>
         <span class="color_verde">
         <?php echo $reflector_ysf;?></span>        
