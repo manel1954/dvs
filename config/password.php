@@ -78,7 +78,7 @@
         }
 h2{
     color:#999999;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size:18px;
     font-weight: normal;
 }
