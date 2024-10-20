@@ -24,14 +24,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #000;
+            background-color: rgba(0, 0, 0, 0.5);
             justify-content: center;
             align-items: center;
         }
 
         /* Estilo para el contenido del modal */
         .modal-content {
-            background-color: white;
+            background-color: black;
             padding: 60px;
             border-radius: 10px;
             text-align: center;
