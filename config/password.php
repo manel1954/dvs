@@ -77,7 +77,10 @@
             background-color: darkgreen; /* Cambia a un tono más oscuro al pasar el mouse */
         }
 h2{
-    color:#999999;font-family: 'Verdana', sans-serif;font-size:18px;font-weight: normal;
+    color:#999999;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    font-weight: normal;
 }
     </style>
 
