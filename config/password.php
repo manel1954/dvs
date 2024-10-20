@@ -35,7 +35,7 @@
             padding: 60px;
             border-radius: 10px;
             text-align: center;
-            border:3px solid #fff;
+            border:3px solid #a9a9a9;
         }
 
         /* Estilo para el campo de la contraseña */
