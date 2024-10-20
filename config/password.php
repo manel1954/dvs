@@ -109,7 +109,7 @@
                 <input type="password" id="password" placeholder="Contraseña">
                 <br>
                 <button type="submit" class="btn-verde">Acceder</button>
-                <button type="button" class="btn-rojo" onclick="cerrarModal()">Cancelar</button>
+                <button type="button" class="btn-rojo" onclick="cerrarModal()">&nbsp;&nbsp;&nbsp;Cancelar</button>
             </form>
         </div>
     </div>
