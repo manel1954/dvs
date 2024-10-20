@@ -32,9 +32,9 @@
         /* Estilo para el contenido del modal */
         .modal-content {
             background-color: white;
-            padding: 50px;
-            border-radius: 1px;
-            text-align: left;
+            padding: 70px;
+            border-radius: 10px;
+            text-align: center;
         }
 
         /* Estilo para el campo de la contraseña */
