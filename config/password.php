@@ -78,7 +78,7 @@
         }
 h2{
     color:#999999;
-    font-family: 'arial', sans-serif;
+    font-family: 'gidole', sans-serif;
     font-size:18px;
     font-weight: normal;
 }
