@@ -80,7 +80,7 @@ h2{
     color:#999999;
     font-family: 'arial', sans-serif;
     font-size:18px;
-    font-weight: normal;
+    font-weight: bold;
 }
     </style>
 
