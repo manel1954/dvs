@@ -25,8 +25,8 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            justify-content: left;
-            align-items: left;
+            justify-content: center;
+            align-items: center;
         }
 
         /* Estilo para el contenido del modal */
