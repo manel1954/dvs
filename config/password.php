@@ -95,7 +95,7 @@
         }
 
         function cerrarModal() {
-            window.location.href = "index.php"; // Redirige a index.php al cancelar
+            window.location.href = "../../index.php"; // Redirige a index.php al cancelar
         }
     </script>
 </head>
