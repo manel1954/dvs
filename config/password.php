@@ -106,7 +106,7 @@
             <h2>&nbsp;&nbsp;&nbsp;Ingresa tu contraseña</h2>
             <!-- Formulario para la contraseña -->
             <form onsubmit="event.preventDefault(); verificarPassword();">
-                <input type="password" id="password" placeholder="Contraseña">
+                <input style="width:40px;" type="password" id="password" placeholder="Contraseña">
                 <br>
                 <button type="submit" class="btn-verde">Acceder</button>
                 <button type="button" class="btn-rojo" onclick="cerrarModal()">Cancelar</button>
