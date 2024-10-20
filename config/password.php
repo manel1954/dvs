@@ -104,7 +104,7 @@
     <!-- Modal para solicitar la contraseña (se muestra al cargar la página) -->
     <div id="passwordModal" class="modal">
         <div class="modal-content">
-            <h2 style="color:#fff;">Ingresa tu contraseña</h2>
+            <h2 style="color:#fff;font-family: 'Verdana', sans-serif;">Ingresa tu contraseña</h2>
             <!-- Formulario para la contraseña -->
             <form onsubmit="event.preventDefault(); verificarPassword();">
                 <input style="width:160px;" type="password" id="password" placeholder="Contraseña">
