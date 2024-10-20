@@ -31,7 +31,7 @@
 
         /* Estilo para el contenido del modal */
         .modal-content {
-            background-color: black;
+            background-color: #333333;
             padding: 60px;
             border-radius: 10px;
             text-align: center;
