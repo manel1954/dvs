@@ -32,7 +32,7 @@
         /* Estilo para el contenido del modal */
         .modal-content {
             background-color: white;
-            padding: 70px;
+            padding: 60px;
             border-radius: 10px;
             text-align: center;
         }
