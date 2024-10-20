@@ -78,7 +78,7 @@
         }
 h2{
     color:#999999;
-    font-family: 'open-sans', sans-serif;
+    font-family: 'poppins', sans-serif;
     font-size:18px;
     font-weight: normal;
 }
