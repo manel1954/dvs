@@ -78,7 +78,7 @@
         }
 h2{
     color:#999999;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'montserrat', sans-serif;
     font-size:18px;
     font-weight: normal;
 }
