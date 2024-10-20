@@ -33,8 +33,8 @@
         .modal-content {
             background-color: white;
             padding: 50px;
-            border-radius: 10px;
-            text-align: center;
+            border-radius: 1px;
+            text-align: left;
         }
 
         /* Estilo para el campo de la contraseña */
