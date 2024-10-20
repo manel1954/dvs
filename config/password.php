@@ -76,7 +76,9 @@
         .btn-verde:hover {
             background-color: darkgreen; /* Cambia a un tono más oscuro al pasar el mouse */
         }
-
+h2{
+    color:#fff;font-family: 'Verdana', sans-serif;font-size:18px;font-weight: normal;
+}
     </style>
 
     <script>
@@ -104,7 +106,7 @@
     <!-- Modal para solicitar la contraseña (se muestra al cargar la página) -->
     <div id="passwordModal" class="modal">
         <div class="modal-content">
-            <h2 style="color:#fff;font-family: 'Verdana', sans-serif;font-size:18px;font-weight: normal;">Ingresa tu contraseña</h2>
+            <h2>Ingresa tu contraseña</h2>
             <!-- Formulario para la contraseña -->
             <form onsubmit="event.preventDefault(); verificarPassword();">
                 <input style="width:160px;" type="password" id="password" placeholder="Contraseña">
