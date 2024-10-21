@@ -276,12 +276,14 @@ h6{
     <div class="col-md-4 config_especial"><br>     
         <h5>CONFIGURACIÓN GENERAL</h5>
 
-<form method="post" action="/dvs/config/cambia_puerto.php">    
-<div class="fondo_datos" style="display: flex; justify-content: space-between;text-align: right;">
-        <span>&nbsp;&nbsp;PUERTO USRP: </span><span class="color_verde"><?php echo $puerto;?> </span>
-        <input name="puerto" class="fuente_boton3 form-control" placeholder="Puerto USRP + Enter" style="margin-left: 2px; width: 200px;"style="margin-left: 2px; width: 200px;">       
-        </div> 
+        <form method="post" action="/dvs/config/cambia_puerto.php">    
+    <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
+        <span>&nbsp;&nbsp;PUERTO USRP: </span>
+        <span class="color_verde" style="margin-left: auto;"><?php echo $puerto;?> </span>
+        <input name="puerto" class="fuente_boton3 form-control" placeholder="Puerto USRP + Enter" style="margin-left: 2px; width: 200px;">
+    </div> 
 </form>
+
 
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
