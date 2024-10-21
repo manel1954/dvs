@@ -346,8 +346,8 @@ h6{
         <span>&nbsp;&nbsp;REFLECTOR YSF: </span>
         <span class="color_verde"style="margin-left: auto;">
         <?php echo $reflector_ysf;?></span>        
-        <input name="reflector_ysf" style="margin-left: auto;"class="fuente_boton3 form-control" placeholder="ej. EA-Distrito-4 + Enter" 
-        style="margin-left: 2px; width: 200px;">
+        <input name="reflector_ysf" class="fuente_boton3 form-control" placeholder="ej. EA-Distrito-4 + Enter" 
+        style="margin-left: auto; width: 200px;">
     </div>
 </form>
 
