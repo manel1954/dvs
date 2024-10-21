@@ -285,7 +285,7 @@ h6{
 
 <form method="post" action="/dvs/config/cambia_configuracion_indicativo.php">
 <div class="fondo_datos" style="display: flex; justify-content: space-between; align-items: center;">
-        <span>&nbsp;&nbsp;INDICATIVO: </span><span class="color_verde" style="text-align:right;"><?php echo $callsign;?></span>
+        <span>&nbsp;&nbsp;INDICATIVO: </span><span class="color_verde" style="margin-left: auto;"><?php echo $callsign;?></span>
         <input name="indicativo" class="fuente_boton3 form-control" placeholder="Indicativo + Enter" style="margin-left: 2px; width: 200px;">
         </div>
 </form>
