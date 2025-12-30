@@ -39,7 +39,9 @@ $callsign = substr("$callsign", 9, 11);
     <link href="css/featherlight.css" type="text/css" rel="stylesheet" />
     <script src="scripts/featherlight.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
-
+body{
+    background:#000;
+}
 #caja_cambiar_port{     
 display: none;   
 }
@@ -47,11 +49,12 @@ display: none;
 </head>
 <body style="background-image: url(images/fondo_02.png);font: 11pt arial, sans-serif;">
 <center>
-<fieldset style="box-shadow:0 0 10px #999; background-color:#000; width:0px;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+<div class="col-12">
+<fieldset style="box-shadow:0 0 10px #999; background-color:#000; width:100%;margin-top:15px;margin-left:0px;margin-right:5px;font-size:13px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
 <div style="margin-top:8px;background:#000;" class="container"> 
 <div class="header" style="margin-top:8px;background:#341434;">
 <center>
-<h2>DVSwitch Dashboard&nbsp;&nbsp;<?php echo $callsign;?></h2>
+<h2>MONITOR 4374</h2>
 <img src="Logo_Ader.png" width="120" alt=""/></img>
 </center>
 </div>
@@ -79,25 +82,27 @@ function getMMDVMConfigFileContent() {
 		return $conf;
 	}
 
-$mmdvmconfigfile = getMMDVMConfigFileContent();
-    /* echo '<table style="border:none; border-collapse:collapse; cellspacing:0; cellpadding:0; background-color:#fafafa;"><tr style="border:none;background-color:#fafafa;">';
-    echo '<td width="200px" valign="top" class="hide" style="border:none;background-color:#fafafa;">';
-    echo '<div class="nav">'."\n";
-    echo '<script type="text/javascript">'."\n";
-    echo 'function reloadModeInfo(){'."\n";
-    echo '  $("#modeInfo").load("include/status.php",function(){ setTimeout(reloadModeInfo,1000) });'."\n";
-    echo '}'."\n";
-    echo 'setTimeout(reloadModeInfo,1000);'."\n";
-    echo '$(window).trigger(\'resize\');'."\n";
-    echo '</script>'."\n";
-    echo '<div id="modeInfo">'."\n"; */
-    //include 'include/status.php';			// Mode and Networks Info
-    
+// ESTO ES PARA QUE SALGA LA INFO A LA IZQUIERA **************************************************************************************************
+// $mmdvmconfigfile = getMMDVMConfigFileContent();
+//     echo '<table style="border:none; border-collapse:collapse; cellspacing:0; cellpadding:0; background-color:#fafafa;"><tr style="border:none;background-color:#fafafa;">';
+//     echo '<td width="200px" valign="top" class="hide" style="border:none;background-color:#fafafa;">';
+//     echo '<div class="nav">'."\n";
+//     echo '<script type="text/javascript">'."\n";
+//     echo 'function reloadModeInfo(){'."\n";
+//     echo '  $("#modeInfo").load("include/status.php",function(){ setTimeout(reloadModeInfo,1000) });'."\n";
+//     echo '}'."\n";
+//     echo 'setTimeout(reloadModeInfo,1000);'."\n";
+//     echo '$(window).trigger(\'resize\');'."\n";
+//     echo '</script>'."\n";
+//     echo '<div id="modeInfo">'."\n";
+//     include 'include/status.php';			// Mode and Networks Info
+//***********************************************************************************************************************************************
+
     echo '</div>'."\n";
     echo '</div>'."\n";
     echo '</td>'."\n";
 
-    echo '<td valign="top" style="border:none; height: 480px; background-color:#fafafa;">';
+    echo '<td valign="top" style="border:none; height: 480px; background-color:#000;">';
     echo '<div class="content">'."\n";
     echo '<script type="text/javascript">'."\n";define("RXMON","YES");define("RXMON","YES");
 
@@ -151,13 +156,14 @@ $mmdvmconfigfile = getMMDVMConfigFileContent();
     ?>
 
 </fieldset>
-
+</div>
 
 
 
 
 <div>
-<button class="button link_especial" ><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER AL DASHBOARD PRINCIPAL</a</buttton>
+<!-- <button class="button link_especial" ><a href="/dvs/index_dvswitch_buster.php" class="btn btn-danger" style="color:#9af240;">VOLVER AL DASHBOARD PRINCIPAL</a</buttton> -->
+
 </div> 
 
 
@@ -171,5 +177,6 @@ function abre_caja_cambia_port(){
     $("#caja_cambiar_port").css("display","block");
 }
 </script>
+</center>
 </body>
 </html>

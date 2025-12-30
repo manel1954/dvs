@@ -266,7 +266,7 @@ h6{
 </form>
 <br>
 
-<form method="post" action="../index_dvswitch_buster.php">
+<form method="post" action="../../index_botones.php">
     <button class="btn btn-warning btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
 </form>
 <br>

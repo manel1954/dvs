@@ -9,16 +9,15 @@
         body {
             background: #000;
             display: flex;
-            justify-content: center; /* Centrar horizontalmente */
-            align-items: center; /* Centrar verticalmente */
-            height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            text-align: center; /* Centrar texto y botones */
+            text-align: center;
         }
 
-        /* Estilo para el cuadro modal */
         .modal {
-            display: flex; /* Mostramos el modal inmediatamente al cargar la página */
+            display: flex;
             position: fixed;
             top: 0;
             left: 0;
@@ -29,16 +28,14 @@
             align-items: center;
         }
 
-        /* Estilo para el contenido del modal */
         .modal-content {
             background-color: #333333;
             padding: 60px;
             border-radius: 10px;
             text-align: center;
-            border:3px solid #a9a9a9;
+            border: 3px solid #a9a9a9;
         }
 
-        /* Estilo para el campo de la contraseña */
         input[type="password"] {
             padding: 10px;
             margin: 10px 0;
@@ -47,52 +44,61 @@
             border: 1px solid #ccc;
         }
 
-        /* Estilo para el botón rojo */
         .btn-rojo {
-            background-color: red; /* Color de fondo rojo */
-            color: white; /* Texto blanco */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar por el botón */
-            margin: 10px; /* Espacio entre botones */
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
         }
 
         .btn-rojo:hover {
-            background-color: darkred; /* Cambia a un tono más oscuro al pasar el mouse */
+            background-color: darkred;
         }
 
-        /* Estilo para el botón verde */
         .btn-verde {
-            background-color: green; /* Color de fondo verde */
-            color: white; /* Texto blanco */
-            padding: 10px 20px; /* Espaciado interno del botón */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar por el botón */
-            margin: 10px; /* Espacio entre botones */
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
         }
 
         .btn-verde:hover {
-            background-color: darkgreen; /* Cambia a un tono más oscuro al pasar el mouse */
+            background-color: darkgreen;
         }
-h2{
-    color:#999999;
-    font-family: 'arial', sans-serif;
-    font-size:18px;
-    font-weight: bold;
-}
+
+        h2 {
+            color: #999999;
+            font-family: 'arial', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Verifica si el usuario ya está autenticado
+            if (localStorage.getItem("autenticado") === "true") {
+                window.location.href = "../../index_botones.php"; // Redirige automáticamente
+            } else {
+                // Si no está autenticado, muestra el modal
+                document.getElementById("passwordModal").style.display = "flex";
+            }
+        });
+
         function verificarPassword() {
             var password = document.getElementById("password").value;
-            
-            // Define la contraseña correcta
-            var passwordCorrecta = "ea3eizader";
-            
+            var passwordCorrecta = "ea3eizader"; // Define la contraseña correcta
+
             if (password === passwordCorrecta) {
-                // Redirige a la página editor_general.php si la contraseña es correcta
+                // Guarda el estado de autenticación en localStorage
+                localStorage.setItem("autenticado", "true");
+                // Redirige a la página
                 window.location.href = "../../index_botones.php";
             } else {
                 alert("Contraseña incorrecta. Inténtalo de nuevo.");
@@ -106,11 +112,10 @@ h2{
 </head>
 <body>
 
-    <!-- Modal para solicitar la contraseña (se muestra al cargar la página) -->
-    <div id="passwordModal" class="modal">
+    <!-- Modal para solicitar la contraseña -->
+    <div id="passwordModal" class="modal" style="display: none;">
         <div class="modal-content">
             <h2>Ingresa tu contraseña</h2>
-            <!-- Formulario para la contraseña -->
             <form onsubmit="event.preventDefault(); verificarPassword();">
                 <input style="width:183px;" type="password" id="password" placeholder="Contraseña">
                 <br>

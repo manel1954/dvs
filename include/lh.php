@@ -3,9 +3,10 @@ include_once dirname(dirname(__FILE__)).'/include/config.php';
 include_once dirname(dirname(__FILE__)).'/include/tools.php';        
 include_once dirname(dirname(__FILE__)).'/include/functions.php';    
 ?>
-<span style="font-weight: bold;font-size:14px;">Gateway Activity</span>
-<fieldset style="box-shadow:0 0 10px #999;background-color:#e8e8e8e8; width:640px;margin-top:10px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
-  <table style="margin-top:3px;">
+<div class="col-12">
+<span style="font-weight: bold;font-size:14px;"></span>
+<fieldset style="box-shadow:0 0 10px #999;background-color:#e8e8e8e8; width:100%;margin-top:10px;margin-left:0px;margin-right:0px;font-size:12px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+  <table style="margin-top:3px; width:100%;">
     <tr>
       <th>Time (<?php echo date('T')?>)</th>
       <th>Mode</th>
@@ -21,7 +22,7 @@ include_once dirname(dirname(__FILE__)).'/include/functions.php';
     </tr>
 <?php
 $i = 0;
-for ($i = 0;  ($i <= 19); $i++) { //Last 20 calls
+for ($i = 0;  ($i <= 8); $i++) { //Last 20 calls
 	if (isset($lastHeard[$i])) {
 		$listElem = $lastHeard[$i];
 		if ( $listElem[2] ) {
@@ -120,3 +121,4 @@ for ($i = 0;  ($i <= 19); $i++) { //Last 20 calls
 ?>
   </table>
 </fieldset>
+</div>

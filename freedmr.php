@@ -10,5 +10,5 @@ exec("sudo systemctl restart md380-emu.service");
 exec("sudo systemctl restart mmdvm_bridge.service");
 exec("sudo systemctl restart nxdngatewayd.service");
 
-header("Location: index_dvswitch_buster.php");
+header("Location: ../index_botones.php");
 ?>

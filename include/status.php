@@ -58,6 +58,10 @@ $net3= cidr_match($ip,"127.0.0.0/8");
 $net4= cidr_match($ip,"10.0.0.0/8");
 $net5= cidr_match($ip,REMOTENET);
 	
+
+
+
+
 if (file_exists('/tmp/ABInfo_'.ABINFO.'.json')) {
     $abinfo = getABInfo('/tmp/ABInfo_'.ABINFO.'.json');
     echo "<table style=\"margin-top:4px;\">\n";
@@ -119,6 +123,9 @@ if (file_exists('/tmp/ABInfo_'.ABINFO.'.json')) {
     echo "<tr><th width=50%>AB ver</th><td style=\"background: #f9f9f9;\">".$abinfo['ab']['version']."</td></tr>\n";
     echo "</table>\n"; }
 }
+
+
+
 
 
 // TRX Status code
