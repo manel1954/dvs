@@ -298,7 +298,7 @@ body{
                       
             <button class="btn btn-info btn-sm btn-block" type="submit">CONFIRMAR LOS CAMBIOS</button>
             </form>
-    <form method="post" action="../../index_botones.php"><br>
+    <form method="post" action="../index_dvswitch_buster.php"><br>
             <button class="btn btn-danger btn-sm btn-block" type="submit">VOLVER AL DASHBOARD</button>
     </form>
           </div><!-- panel-body -->
