@@ -1,10 +1,9 @@
 <?php
 include_once 'include/config.php';
 include_once 'include/tools.php';
+include_once 'include/abinfo.php';  // <-- AÑADIR ESTA LÍNEA
 $callsign = exec("sudo sed -n '2p' /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
 $callsign = substr("$callsign", 9, 11); 	
-
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

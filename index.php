@@ -1,3 +1,8 @@
+<?php
+include_once 'include/config.php';
+include_once 'include/tools.php';
+include_once 'include/abinfo.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,8 +1,11 @@
 <?php
 include_once dirname(dirname(__FILE__)).'/include/config.php';         
-include_once dirname(dirname(__FILE__)).'/include/tools.php';        
+include_once dirname(dirname(__FILE__)).'/include/tools.php';
+include_once dirname(dirname(__FILE__)).'/include/abinfo.php';  // <-- AÑADIR ESTA LÍNEA
 include_once dirname(dirname(__FILE__)).'/include/functions.php';
 
+$callsign = exec("sudo sed -n '2p' /opt/MMDVM_Bridge/MMDVM_Bridge.ini");
+$callsign = substr("$callsign", 9, 11);
 ?>
 <span style="font-weight: bold;font-size:14px;">Status</span>
 <fieldset style="background-color:#e8e8e8e8;width:160px;margin-top:6px;;margin-bottom:0px;margin-left:0px;margin-right:3px;font-size:12px;border-top-left-radius: 10px; border-top-right-radius: 10px;border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
@@ -129,7 +132,13 @@ if (file_exists('/tmp/ABInfo_'.ABINFO.'.json')) {
 
 
 // TRX Status code
-echo '<br><table><tr><th colspan="2">TRX Info</th></tr><tr>';
+echo '<br><table style="margin-top:4px;">';
+echo '<tr><th colspan="2">TRX Info</th></tr>';
+echo '<tr><th width="50%">Callsign</th><td style="background:#f9f9f9;color:#b44010;font-weight:bold;">'.$callsign.'</td></tr>';
+echo '<tr><th width="50%">Mode</th><td style="background:#f9f9f9;font-weight:bold;color:#b44010;">'.$abinfo['tlv']['ambe_mode'].'</td></tr>';
+echo '<tr><th width="50%">Tx TG</th><td style="background:#f9f9f9;font-weight:bold;color:#ef7215;">'.$abinfo['digital']['tg'].'</td></tr>';
+echo '<tr><th width="50%">AB ver</th><td style="background:#f9f9f9;">1.6.4</td></tr>';
+
 if (isProcessRunning("MMDVM_Bridge")) {
 if (isset($lastHeard[0])) {
     $listElem = $lastHeard[0];
@@ -138,41 +147,41 @@ if (isset($lastHeard[0])) {
             }
             else {
             if (getActualMode($lastHeard, $mmdvmconfigs) === 'idle') {
-                    echo "<td style=\"background:#0b0; color:#030;\">Listening</td>";
+                    echo "<td colspan=\"2\" style=\"background:#0b0; color:#030;\">Listening</td>";
                     }
             elseif (getActualMode($lastHeard, $mmdvmconfigs) === NULL) {
-                    if (isProcessRunning("MMDVM_Bridge")) { echo "<td style=\"background:#0b0; color:#030;\">Listening</td>"; 
-		} else { echo "<td style=\"background:#ffffed; color:#b0b0b0;font-weight: bold\">OFFLINE</td>"; }
+                    if (isProcessRunning("MMDVM_Bridge")) { echo "<td colspan=\"2\" style=\"background:#0b0; color:#030;\">Listening</td>"; 
+		} else { echo "<td colspan=\"2\" style=\"background:#ffffed; color:#b0b0b0;font-weight: bold\">OFFLINE</td>"; }
                     }
             elseif ($listElem[2] && $listElem[6] == null && $abinfo['tlv']['ambe_mode']== "DSTAR" && getActualMode($lastHeard, $mmdvmconfigs) === 'D-Star') {
-                    echo "<td style=\"background:#4aa361;\">RX D-Star</td>";
+                    echo "<td colspan=\"2\" style=\"background:#4aa361;\">RX D-Star</td>";
                     }
             elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'D-Star') {
-                    echo "<td style=\"background:#ade;\">Listening D-Star</td>";
+                    echo "<td colspan=\"2\" style=\"background:#ade;\">Listening D-Star</td>";
                     }
             elseif ($listElem[2] && $listElem[6] == null && $abinfo['tlv']['ambe_mode']== "DMR" && getActualMode($lastHeard, $mmdvmconfigs) === 'DMR') {
-                    echo "<td style=\"background:#4aa361;\">RX DMR</td>";
+                    echo "<td colspan=\"2\" style=\"background:#4aa361;\">RX DMR</td>";
                     }
             elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'DMR') {
-                    echo "<td style=\"background:#f93;\">Listening DMR</td>";
+                    echo "<td colspan=\"2\" style=\"background:#f93;\">Listening DMR</td>";
                     }
             elseif ($listElem[2] && $listElem[6] == null && ($abinfo['tlv']['ambe_mode']== "YSFN" || $abinfo['tlv']['ambe_mode']== "YSFW") && getActualMode($lastHeard, $mmdvmconfigs) === 'YSF') {
-                    echo "<td style=\"background:#4aa361;\">RX YSF</td>";
+                    echo "<td colspan=\"2\" style=\"background:#4aa361;\">RX YSF</td>";
                     }
             elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'YSF') {
-                    echo "<td style=\"background:#ff9;\">Listening YSF</td>";
+                    echo "<td colspan=\"2\" style=\"background:#ff9;\">Listening YSF</td>";
                     }
             elseif ($listElem[2] && $listElem[6] == null && $abinfo['tlv']['ambe_mode']== "P25" && getActualMode($lastHeard, $mmdvmconfigs) === 'P25') {
-    	        echo "<td style=\"background:#4aa361;\">RX P25</td>";
+    	        echo "<td colspan=\"2\" style=\"background:#4aa361;\">RX P25</td>";
     	        }
     	elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'P25') {
-    	        echo "<td style=\"background:#f9f;\">Listening P25</td>";
+    	        echo "<td colspan=\"2\" style=\"background:#f9f;\">Listening P25</td>";
     	        }
 	elseif ($listElem[2] && $listElem[6] == null && $abinfo['tlv']['ambe_mode']== "NXDN" && getActualMode($lastHeard, $mmdvmconfigs) === 'NXDN') {
-    	        echo "<td style=\"background:#4aa361;\">RX NXDN</td>";
+    	        echo "<td colspan=\"2\" style=\"background:#4aa361;\">RX NXDN</td>";
     	        }
     	elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'NXDN') {
-    	        echo "<td style=\"background:#c9f;\">Listening NXDN</td>";
+    	        echo "<td colspan=\"2\" style=\"background:#c9f;\">Listening NXDN</td>";
     	        }
 	elseif (getActualMode($lastHeard, $mmdvmconfigs) === 'POCSAG') {
     	        echo "<td style=\"background:#4aa361;\">POCSAG</td>";
